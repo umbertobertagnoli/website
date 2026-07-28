@@ -18,7 +18,7 @@ const translations = {
     hero: {
       eyebrow: "Laktatdiagnostik · Wien",
       title: "Wissenschaftliche Leistungsdiagnostik für ambitionierte Athlet:innen",
-      subtitle: "Laktattests, Trainingsbereiche und individuelle Trainingspläne für Läufer:innen, Radfahrer:innen und Triathlet:innen in Wien.",
+      subtitle: "Finde deine exakten Trainingsbereiche per Laktattest und trainiere ab morgen zielgerichtet statt auf Verdacht — für Läufer:innen, Radfahrer:innen und Triathlet:innen in Wien.",
       cta: "Termin buchen",
       secondary: "Mehr erfahren",
       chips: ["Individuelle Trainingsbereiche", "Wissenschaftliche Methode", "Persönliche Betreuung"]
@@ -207,7 +207,7 @@ const translations = {
     hero: {
       eyebrow: "Lactate Diagnostics · Vienna",
       title: "Science-based performance diagnostics for driven athletes",
-      subtitle: "Lactate testing, training zones, and personalised training plans for runners, cyclists, and triathletes in Vienna.",
+      subtitle: "Discover your exact training zones through lactate testing and start training with purpose tomorrow — for runners, cyclists, and triathletes in Vienna.",
       cta: "Book Appointment",
       secondary: "Learn more",
       chips: ["Personalised training zones", "Evidence-based method", "One-on-one guidance"]
