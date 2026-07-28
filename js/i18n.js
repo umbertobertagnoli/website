@@ -1,4 +1,4 @@
-/* UnA Performance — translation data (DE default, EN secondary) */
+/* WeMakeYouFast — translation data (DE default, EN secondary) */
 
 const translations = {
   de: {
@@ -112,7 +112,7 @@ const translations = {
       eyebrow: "Stimmen",
       title: "Das sagen unsere Athlet:innen",
       items: [
-        { quote: "Der Laktattest bei UnA Performance hat mein Training komplett verändert. Endlich trainiere ich in den richtigen Zonen statt nach Gefühl.", name: "Lisa K.", role: "Marathonläuferin" },
+        { quote: "Der Laktattest bei WeMakeYouFast hat mein Training komplett verändert. Endlich trainiere ich in den richtigen Zonen statt nach Gefühl.", name: "Lisa K.", role: "Marathonläuferin" },
         { quote: "Sehr professionelle Betreuung und eine Auswertung, die man wirklich versteht. Klare Empfehlung für alle Radsportler:innen.", name: "Thomas B.", role: "Hobby-Radrennfahrer" },
         { quote: "Der All-Inclusive-Test plus Trainingsplan war genau das, was ich vor meinem ersten Ironman gebraucht habe.", name: "Julia S.", role: "Triathletin" }
       ]
@@ -135,7 +135,7 @@ const translations = {
         addressLabel: "Standort",
         address: "Wien, Österreich",
         emailLabel: "E-Mail",
-        email: "info@una-performance.at",
+        email: "info@wemakeyoufast.com",
         phoneLabel: "Telefon",
         phone: "+43 660 123 45 67"
       },
@@ -159,9 +159,9 @@ const translations = {
         title: "Impressum",
         updated: "Stand: Juli 2026",
         mediaOwnerTitle: "Medieninhaber & Herausgeber",
-        mediaOwner: "UnA Performance\nMusterstraße 1, 1010 Wien, Österreich",
+        mediaOwner: "WeMakeYouFast\nMusterstraße 1, 1010 Wien, Österreich",
         contactTitle: "Kontakt",
-        contactEmail: "E-Mail: info@una-performance.at",
+        contactEmail: "E-Mail: info@wemakeyoufast.com",
         contactPhone: "Telefon: +43 660 123 45 67",
         regTitle: "Unternehmensangaben",
         regItems: [
@@ -179,7 +179,7 @@ const translations = {
         introTitle: "Allgemeine Hinweise",
         introText: "Der Schutz deiner personenbezogenen Daten ist uns wichtig. Diese Datenschutzerklärung informiert dich darüber, welche Daten wir erheben, wenn du unsere Website besuchst oder das Kontaktformular nutzt, und wie wir damit umgehen.",
         controllerTitle: "Verantwortlicher",
-        controllerText: "UnA Performance, Musterstraße 1, 1010 Wien, Österreich — info@una-performance.at (Platzhalterangaben)",
+        controllerText: "WeMakeYouFast, Musterstraße 1, 1010 Wien, Österreich — info@wemakeyoufast.com (Platzhalterangaben)",
         formTitle: "Kontaktformular",
         formText: "Wenn du uns über das Kontaktformular kontaktierst, speichern wir die von dir angegebenen Daten (Name, E-Mail-Adresse, Nachricht) ausschließlich zur Bearbeitung deiner Anfrage und für den Fall von Anschlussfragen.",
         cookiesTitle: "Cookies & Hosting",
@@ -301,7 +301,7 @@ const translations = {
       eyebrow: "Testimonials",
       title: "What Our Athletes Say",
       items: [
-        { quote: "The lactate test at UnA Performance completely changed how I train. I'm finally training in the right zones instead of just going by feel.", name: "Lisa K.", role: "Marathon Runner" },
+        { quote: "The lactate test at WeMakeYouFast completely changed how I train. I'm finally training in the right zones instead of just going by feel.", name: "Lisa K.", role: "Marathon Runner" },
         { quote: "Very professional guidance and results that actually make sense. Highly recommend it to any cyclist.", name: "Thomas B.", role: "Amateur Road Racer" },
         { quote: "The All-Inclusive test plus training plan was exactly what I needed before my first Ironman.", name: "Julia S.", role: "Triathlete" }
       ]
@@ -324,7 +324,7 @@ const translations = {
         addressLabel: "Location",
         address: "Vienna, Austria",
         emailLabel: "Email",
-        email: "info@una-performance.at",
+        email: "info@wemakeyoufast.com",
         phoneLabel: "Phone",
         phone: "+43 660 123 45 67"
       },
@@ -348,9 +348,9 @@ const translations = {
         title: "Impressum",
         updated: "Last updated: July 2026",
         mediaOwnerTitle: "Media Owner & Publisher",
-        mediaOwner: "UnA Performance\nMusterstraße 1, 1010 Vienna, Austria",
+        mediaOwner: "WeMakeYouFast\nMusterstraße 1, 1010 Vienna, Austria",
         contactTitle: "Contact",
-        contactEmail: "Email: info@una-performance.at",
+        contactEmail: "Email: info@wemakeyoufast.com",
         contactPhone: "Phone: +43 660 123 45 67",
         regTitle: "Company Details",
         regItems: [
@@ -368,7 +368,7 @@ const translations = {
         introTitle: "General Information",
         introText: "Protecting your personal data matters to us. This privacy policy explains what data we collect when you visit our website or use the contact form, and how we handle it.",
         controllerTitle: "Data Controller",
-        controllerText: "UnA Performance, Musterstraße 1, 1010 Vienna, Austria — info@una-performance.at (placeholder details)",
+        controllerText: "WeMakeYouFast, Musterstraße 1, 1010 Vienna, Austria — info@wemakeyoufast.com (placeholder details)",
         formTitle: "Contact Form",
         formText: "If you contact us via the contact form, we store the data you provide (name, email address, message) solely to process your request and for any follow-up questions.",
         cookiesTitle: "Cookies & Hosting",

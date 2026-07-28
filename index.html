@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UnA Performance — Laktatdiagnostik Wien</title>
+  <title>WeMakeYouFast — Laktatdiagnostik Wien</title>
   <meta name="description" content="Laktatdiagnostik, Trainingsbereiche und individuelle Trainingspläne für Läufer:innen, Radfahrer:innen und Triathlet:innen in Wien." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%231660e8'/%3E%3Cpath d='M20 65 L38 45 L52 58 L80 30' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +16,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#home" class="logo">
-        <span class="logo-mark">UnA</span><span>Performance</span>
+        <span class="logo-mark">We</span><span>MakeYouFast</span>
       </a>
 
       <nav class="main-nav" data-main-nav>
@@ -148,7 +148,9 @@
         </div>
 
         <div class="contact-grid">
-          <form class="contact-form" data-reveal data-contact-form novalidate>
+          <form class="contact-form" data-reveal data-contact-form novalidate action="https://formsubmit.co/ajax/umbi@wemakeyoufast.com" method="POST">
+            <input type="hidden" name="_subject" value="Neue Anfrage über wemakeyoufast.com" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="form-group">
               <label for="name" data-i18n="contact.form.name">Name</label>
               <input type="text" id="name" name="name" required data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Dein Name" />
@@ -162,6 +164,7 @@
               <textarea id="message" name="message" required data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Erzähl uns von deinen Zielen …"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.form.submit">Nachricht senden</button>
+            <div class="form-error" data-form-error hidden>Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib uns direkt an <a href="mailto:umbi@wemakeyoufast.com">umbi@wemakeyoufast.com</a>.</div>
             <div class="form-success" data-form-success>
               <span data-i18n="contact.form.success">Danke! Deine Nachricht wurde übermittelt.</span>
             </div>
@@ -182,7 +185,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#home" class="logo">
-            <span class="logo-mark">UnA</span><span>Performance</span>
+            <span class="logo-mark">We</span><span>MakeYouFast</span>
           </a>
           <p data-i18n="footer.tagline">Laktatdiagnostik & Trainingsplanung in Wien.</p>
         </div>
@@ -209,7 +212,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> UnA Performance. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span></span>
+        <span>© <span data-year>2026</span> WeMakeYouFast. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span></span>
       </div>
     </div>
   </footer>

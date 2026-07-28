@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "una-performance-lang";
+  var STORAGE_KEY = "wemakeyoufast-lang";
   var currentLang = localStorage.getItem(STORAGE_KEY) || "de";
 
   function getPath(obj, path) {
@@ -282,8 +282,22 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var success = form.querySelector("[data-form-success]");
-      if (success) success.classList.add("visible");
-      form.reset();
+      var error = form.querySelector("[data-form-error]");
+      if (error) error.hidden = true;
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Request failed");
+          if (success) success.classList.add("visible");
+          form.reset();
+        })
+        .catch(function () {
+          if (error) error.hidden = false;
+        });
     });
   }
 

@@ -1,4 +1,4 @@
-/* ============ UnA Performance — stylesheet ============ */
+/* ============ WeMakeYouFast — stylesheet ============ */
 
 :root {
   --color-bg: #fafbfd;
@@ -766,6 +766,21 @@ section {
 
 .form-success.visible {
   display: flex;
+}
+
+.form-error {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: #fdeaea;
+  color: #b23434;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-error a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .contact-side {
