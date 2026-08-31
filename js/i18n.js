@@ -18,8 +18,8 @@ const translations = {
     },
     hero: {
       eyebrow: "Laktatdiagnostik · Wien",
-      title: "Wissenschaftliche Leistungsdiagnostik für ambitionierte Athlet:innen",
-      subtitle: "Finde deine exakten Trainingsbereiche per Laktattest und trainiere ab morgen zielgerichtet statt auf Verdacht — für Läufer:innen, Radfahrer:innen und Triathlet:innen in Wien.",
+      title: "Wir machen dich schnell!",
+      subtitle: "Finde deine exakten Trainingsbereiche per Laktattest und trainiere ab morgen zielgerichtet statt auf Verdacht — für Läufer:innen, Radfahrer:innen, Ruderer:innen und Triathlet:innen in Wien.",
       cta: "Termin buchen",
       secondary: "Mehr erfahren",
       chips: ["Individuelle Trainingsbereiche", "Wissenschaftliche Methode", "Persönliche Betreuung"]
@@ -64,10 +64,12 @@ const translations = {
           name: "Laktattest Pro",
           price: "200 €",
           period: "einmalig",
-          desc: "Für ambitionierte Athlet:innen: umfassende Analyse inklusive persönlicher Besprechung.",
+          desc: "Für ambitionierte Athlet:innen: die umfassende physiologische Analyse inklusive persönlicher Besprechung.",
           features: [
             "Alles aus Basic",
             "Erweiterte Herzfrequenz- & Leistungsanalyse",
+            "Bestimmung von VO2max, FatMax und VLamax",
+            "Detaillierte Potentialanalyse: wo du aktuell stehst und wie viel noch geht",
             "Ausführlicher schriftlicher Report",
             "Persönliches Auswertungsgespräch"
           ],
@@ -246,8 +248,8 @@ const translations = {
     },
     hero: {
       eyebrow: "Lactate Diagnostics · Vienna",
-      title: "Science-based performance diagnostics for driven athletes",
-      subtitle: "Discover your exact training zones through lactate testing and start training with purpose tomorrow — for runners, cyclists, and triathletes in Vienna.",
+      title: "We make you fast!",
+      subtitle: "Discover your exact training zones through lactate testing and start training with purpose tomorrow — for runners, cyclists, rowers and triathletes in Vienna.",
       cta: "Book Appointment",
       secondary: "Learn more",
       chips: ["Personalised training zones", "Evidence-based method", "One-on-one guidance"]
@@ -292,10 +294,12 @@ const translations = {
           name: "Lactate Test Pro",
           price: "€200",
           period: "one-time",
-          desc: "For ambitious athletes: a comprehensive analysis with a personal debrief.",
+          desc: "For ambitious athletes: a comprehensive physiological analysis including a personal consultation.",
           features: [
-            "Everything in Basic",
-            "Extended heart rate & power analysis",
+            "Everything from Basic",
+            "Advanced heart rate & performance analysis",
+            "VO2max, FatMax and VLamax determination",
+            "Detailed potential analysis: where you stand and how much room for improvement you have",
             "Detailed written report",
             "Personal results consultation"
           ],
