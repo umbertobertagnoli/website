@@ -12,6 +12,7 @@ const translations = {
       how: "Ablauf",
       pricing: "Preise",
       testimonials: "Stimmen",
+      faq: "FAQ",
       contact: "Kontakt",
       cta: "Termin buchen"
     },
@@ -27,21 +28,7 @@ const translations = {
       eyebrow: "Leistungen",
       title: "Was ist ein Laktattest?",
       intro: "Der Laktattest ist die zuverlässigste Methode, um deine individuellen Trainingsbereiche zu bestimmen. Durch eine stufenweise Belastung auf Laufband, Rad oder Ergometer messen wir, wie sich dein Laktatspiegel im Blut verändert — und leiten daraus präzise Herzfrequenz- und Leistungsbereiche für dein Training ab.",
-      whoTitle: "Für wen ist ein Laktattest geeignet?",
-      who: [
-        "Läufer:innen, die ihre Trainingsbereiche optimieren wollen",
-        "Radfahrer:innen und Triathlet:innen mit Wettkampfzielen",
-        "Ambitionierte Freizeitsportler:innen",
-        "Athlet:innen im Wiedereinstieg nach Pause oder Verletzung"
-      ],
-      includedTitle: "Was ist in einer Session enthalten?",
-      included: [
-        "Persönliches Vorgespräch zu Trainingsstand & Zielen",
-        "Stufentest auf Laufband, Rad oder Ergometer",
-        "Laktatmessung aus dem Ohrläppchen an jeder Stufe",
-        "Herzfrequenz- und Leistungsmessung während des gesamten Tests",
-        "Ausführlicher Ergebnisbericht mit Trainingsbereichen"
-      ]
+      intro2: "Die Antworten auf die häufigsten Fragen dazu — für wen sich der Test eignet, was enthalten ist und wie er abläuft — findest du weiter unten unter „Häufige Fragen“."
     },
     how: {
       eyebrow: "Ablauf",
@@ -115,6 +102,54 @@ const translations = {
         { quote: "Der Laktattest bei WeMakeYouFast hat mein Training komplett verändert. Endlich trainiere ich in den richtigen Zonen statt nach Gefühl.", name: "Lisa K.", role: "Marathonläuferin" },
         { quote: "Sehr professionelle Betreuung und eine Auswertung, die man wirklich versteht. Klare Empfehlung für alle Radsportler:innen.", name: "Thomas B.", role: "Hobby-Radrennfahrer" },
         { quote: "Der All-Inclusive-Test plus Trainingsplan war genau das, was ich vor meinem ersten Ironman gebraucht habe.", name: "Julia S.", role: "Triathletin" }
+      ]
+    },
+    faq: {
+      eyebrow: "FAQ",
+      title: "Häufige Fragen",
+      subtitle: "Die wichtigsten Antworten zu Eignung, Ablauf, Preisen und Organisation.",
+      items: [
+        {
+          q: "Für wen ist ein Laktattest geeignet?",
+          a: "Für alle, die ihr Training auf eine belastbare Datenbasis stellen wollen:",
+          list: [
+            "Läufer:innen, die ihre Trainingsbereiche optimieren wollen",
+            "Radfahrer:innen und Triathlet:innen mit Wettkampfzielen",
+            "Ambitionierte Freizeitsportler:innen",
+            "Athlet:innen im Wiedereinstieg nach Pause oder Verletzung"
+          ]
+        },
+        {
+          q: "Was ist in einer Session enthalten?",
+          a: "Jede Session umfasst:",
+          list: [
+            "Persönliches Vorgespräch zu Trainingsstand & Zielen",
+            "Stufentest auf Laufband, Rad oder Ergometer",
+            "Laktatmessung aus dem Ohrläppchen an jeder Stufe",
+            "Herzfrequenz- und Leistungsmessung während des gesamten Tests",
+            "Ausführlicher Ergebnisbericht mit Trainingsbereichen"
+          ]
+        },
+        {
+          q: "Wie läuft der Test ab?",
+          a: "In vier Schritten: Zuerst besprechen wir in einem Beratungsgespräch deinen Trainingsstand, deine Ziele und die passende Testmethode. Danach folgt ein individuell angepasster Stufentest auf Laufband, Rad oder Ergometer bis zur Ausbelastung. Anschließend werten wir deine Laktat-, Herzfrequenz- und Leistungsdaten aus. Zum Abschluss erhältst du deinen persönlichen Report mit klar definierten Trainingszonen. Die einzelnen Schritte findest du oben im Abschnitt „Ablauf“."
+        },
+        {
+          q: "Was kostet ein Laktattest?",
+          a: "Es gibt drei Pakete, jeweils einmalig und ohne versteckte Kosten: Laktattest Basic um 120 €, Laktattest Pro um 200 € und das All-Inclusive Paket um 500 €. Welche Leistungen jeweils enthalten sind, siehst du im Abschnitt „Preise“."
+        },
+        {
+          q: "Gibt es auch eine laufende Trainingsbetreuung?",
+          a: "Ja. Nach deinem Laktattest kannst du die laufende Trainingsplanung um 99 € pro Monat dazubuchen: individuelle Trainingsplanerstellung und Betreuung, monatlich kündbar."
+        },
+        {
+          q: "Wo findet der Test statt?",
+          a: "In Wien. Die genaue Adresse teilen wir dir nach der Terminvereinbarung mit."
+        },
+        {
+          q: "Wie schnell bekomme ich eine Rückmeldung auf meine Anfrage?",
+          a: "Wir melden uns innerhalb von 24 Stunden, nachdem du das Kontaktformular abgeschickt hast."
+        }
       ]
     },
     contact: {
@@ -205,6 +240,7 @@ const translations = {
       how: "How it works",
       pricing: "Pricing",
       testimonials: "Testimonials",
+      faq: "FAQ",
       contact: "Contact",
       cta: "Book Appointment"
     },
@@ -220,21 +256,7 @@ const translations = {
       eyebrow: "Services",
       title: "What Is a Lactate Test?",
       intro: "A lactate test is the most reliable way to determine your individual training zones. Through a graded test on a treadmill, bike, or ergometer, we track how your blood lactate changes — and translate that into precise heart-rate and power zones for your training.",
-      whoTitle: "Who Is It For?",
-      who: [
-        "Runners looking to fine-tune their training zones",
-        "Cyclists and triathletes preparing for race goals",
-        "Motivated recreational athletes",
-        "Athletes returning to training after a break or injury"
-      ],
-      includedTitle: "What's Included in a Session?",
-      included: [
-        "A personal consultation on your training background and goals",
-        "A graded test on a treadmill, bike, or ergometer",
-        "Lactate measurement from the earlobe at every stage",
-        "Continuous heart rate and power monitoring throughout the test",
-        "A detailed results report with your training zones"
-      ]
+      intro2: "Answers to the most common questions — who the test is for, what's included, and how it works — are further down under “Frequently Asked Questions”."
     },
     how: {
       eyebrow: "How it works",
@@ -308,6 +330,54 @@ const translations = {
         { quote: "The lactate test at WeMakeYouFast completely changed how I train. I'm finally training in the right zones instead of just going by feel.", name: "Lisa K.", role: "Marathon Runner" },
         { quote: "Very professional guidance and results that actually make sense. Highly recommend it to any cyclist.", name: "Thomas B.", role: "Amateur Road Racer" },
         { quote: "The All-Inclusive test plus training plan was exactly what I needed before my first Ironman.", name: "Julia S.", role: "Triathlete" }
+      ]
+    },
+    faq: {
+      eyebrow: "FAQ",
+      title: "Frequently Asked Questions",
+      subtitle: "The key answers on suitability, process, pricing, and logistics.",
+      items: [
+        {
+          q: "Who is a lactate test for?",
+          a: "For anyone who wants to base their training on solid data:",
+          list: [
+            "Runners looking to fine-tune their training zones",
+            "Cyclists and triathletes preparing for race goals",
+            "Motivated recreational athletes",
+            "Athletes returning to training after a break or injury"
+          ]
+        },
+        {
+          q: "What's included in a session?",
+          a: "Every session includes:",
+          list: [
+            "A personal consultation on your training background and goals",
+            "A graded test on a treadmill, bike, or ergometer",
+            "Lactate measurement from the earlobe at every stage",
+            "Continuous heart rate and power monitoring throughout the test",
+            "A detailed results report with your training zones"
+          ]
+        },
+        {
+          q: "How does the test work?",
+          a: "In four steps: first we discuss your training background, your goals, and the right test for you. Next comes a graded test on a treadmill, bike, or ergometer, tailored to your fitness and taken to maximal effort. We then analyse your lactate, heart rate, and power data in detail. Finally, you receive a personal report with clearly defined training zones. You'll find the individual steps above under “How it works”."
+        },
+        {
+          q: "What does a lactate test cost?",
+          a: "There are three packages, each a one-time fee with no hidden costs: Lactate Test Basic at €120, Lactate Test Pro at €200, and the All-Inclusive Package at €500. You can see what each one includes in the “Pricing” section."
+        },
+        {
+          q: "Do you also offer ongoing training support?",
+          a: "Yes. After your lactate test you can add ongoing training planning for €99 per month: personalised training plans and guidance, cancellable monthly."
+        },
+        {
+          q: "Where does the test take place?",
+          a: "In Vienna. We'll share the exact address once your appointment is confirmed."
+        },
+        {
+          q: "How quickly will you reply to my enquiry?",
+          a: "We get back to you within 24 hours of you submitting the contact form."
+        }
       ]
     },
     contact: {

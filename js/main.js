@@ -20,6 +20,8 @@
         '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
       phone:
         '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4h3l1.5 4.5L9.5 10a10 10 0 0 0 4.5 4.5l1.5-2L20 14v3a2 2 0 0 1-2.2 2A16 16 0 0 1 5 6.2 2 2 0 0 1 7 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>',
+      chevron:
+        '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
       mapPin:
         '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9.5" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>'
     };
@@ -64,15 +66,29 @@
       .join("");
   }
 
-  function renderAboutLists(dict) {
-    var who = document.querySelector("[data-about-who]");
-    var included = document.querySelector("[data-about-included]");
-    if (who) {
-      who.innerHTML = dict.about.who.map(function (i) { return "<li>" + i + "</li>"; }).join("");
-    }
-    if (included) {
-      included.innerHTML = dict.about.included.map(function (i) { return "<li>" + i + "</li>"; }).join("");
-    }
+  function renderFaq(dict) {
+    var wrap = document.querySelector("[data-faq]");
+    if (!wrap) return;
+    wrap.innerHTML = dict.faq.items
+      .map(function (item, i) {
+        var list = item.list
+          ? "<ul>" + item.list.map(function (li) { return "<li>" + li + "</li>"; }).join("") + "</ul>"
+          : "";
+        return (
+          '<div class="faq-item" data-reveal>' +
+          '<h3 class="faq-question">' +
+          '<button type="button" class="faq-trigger" aria-expanded="false"' +
+          ' id="faq-trigger-' + i + '" aria-controls="faq-panel-' + i + '">' +
+          "<span>" + item.q + "</span>" +
+          '<span class="faq-chevron">' + icon("chevron") + "</span>" +
+          "</button></h3>" +
+          '<div class="faq-panel" id="faq-panel-' + i + '" role="region" aria-labelledby="faq-trigger-' + i + '">' +
+          '<div class="faq-panel-inner"><p>' + item.a + "</p>" + list + "</div>" +
+          "</div></div>"
+        );
+      })
+      .join("");
+    observeReveal(wrap.querySelectorAll("[data-reveal]"));
   }
 
   function renderSteps(dict) {
@@ -251,10 +267,10 @@
     document.documentElement.lang = dict.meta.htmlLang;
     renderStaticText(dict);
     renderHeroChips(dict);
-    renderAboutLists(dict);
     renderSteps(dict);
     renderPricing(dict);
     renderTestimonials(dict);
+    renderFaq(dict);
     renderContactInfo(dict);
     renderLegal(dict);
     updateLangToggle(lang);
@@ -297,6 +313,19 @@
     });
   }
 
+  // Delegiert, damit die Handler einen Sprachwechsel (der die Liste neu rendert) überleben.
+  function initFaqAccordion() {
+    var list = document.querySelector("[data-faq]");
+    if (!list) return;
+    list.addEventListener("click", function (e) {
+      var trigger = e.target.closest(".faq-trigger");
+      if (!trigger || !list.contains(trigger)) return;
+      var item = trigger.closest(".faq-item");
+      var isOpen = item.classList.toggle("open");
+      trigger.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
+
   function initContactForm() {
     var form = document.querySelector("[data-contact-form]");
     if (!form) return;
@@ -323,7 +352,7 @@
   }
 
   function initStaticReveal() {
-    observeReveal(document.querySelectorAll("section [data-reveal]:not([data-steps] *):not([data-pricing] *):not([data-testimonials] *)"));
+    observeReveal(document.querySelectorAll("section [data-reveal]:not([data-steps] *):not([data-pricing] *):not([data-testimonials] *):not([data-faq] *)"));
   }
 
   function initFooterYear() {
@@ -335,6 +364,7 @@
     initLangToggle();
     initHeaderScroll();
     initMobileNav();
+    initFaqAccordion();
     initContactForm();
     initFooterYear();
     applyLanguage(currentLang);
