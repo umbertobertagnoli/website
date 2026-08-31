@@ -26,6 +26,23 @@
     return icons[name] || "";
   }
 
+  function telLink(number) {
+    return '<a href="tel:' + number.replace(/[^\d+]/g, "") + '">' + number + "</a>";
+  }
+
+  function mailLink(address) {
+    return '<a href="mailto:' + address + '">' + address + "</a>";
+  }
+
+  // Eine Zeile pro Kontaktperson: Name + verlinkter Wert (E-Mail bzw. Telefon).
+  function peopleLines(dict, linkFn, field) {
+    return dict.contact.info.people
+      .map(function (p) {
+        return '<span class="contact-person">' + p.name + "</span>" + linkFn(p[field]);
+      })
+      .join("<br>");
+  }
+
   function renderStaticText(dict) {
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var value = getPath(dict, el.getAttribute("data-i18n"));
@@ -138,8 +155,8 @@
     if (wrap) {
       wrap.innerHTML =
         '<div class="contact-info-row"><div class="contact-info-icon">' + icon("pin") + '</div><div><div class="label">' + dict.contact.info.addressLabel + '</div><div class="value">' + dict.contact.info.address + "</div></div></div>" +
-        '<div class="contact-info-row"><div class="contact-info-icon">' + icon("mail") + '</div><div><div class="label">' + dict.contact.info.emailLabel + '</div><div class="value">' + dict.contact.info.email + "</div></div></div>" +
-        '<div class="contact-info-row"><div class="contact-info-icon">' + icon("phone") + '</div><div><div class="label">' + dict.contact.info.phoneLabel + '</div><div class="value">' + dict.contact.info.phone + "</div></div></div>";
+        '<div class="contact-info-row"><div class="contact-info-icon">' + icon("mail") + '</div><div><div class="label">' + dict.contact.info.emailLabel + '</div><div class="value">' + peopleLines(dict, mailLink, "email") + "</div></div></div>" +
+        '<div class="contact-info-row"><div class="contact-info-icon">' + icon("phone") + '</div><div><div class="label">' + dict.contact.info.phoneLabel + '</div><div class="value">' + peopleLines(dict, telLink, "phone") + "</div></div></div>";
     }
 
     var map = document.querySelector("[data-map]");
@@ -163,7 +180,11 @@
         "<h2>" + l.mediaOwnerTitle + "</h2>" +
         "<p>" + l.mediaOwner.replace(/\n/g, "<br>") + "</p>" +
         "<h2>" + l.contactTitle + "</h2>" +
-        "<p>" + l.contactEmail + "<br>" + l.contactPhone + "</p>" +
+        dict.contact.info.people.map(function (p) {
+          return "<p><strong>" + p.name + "</strong><br>" +
+            l.contactEmailLabel + ": " + mailLink(p.email) + "<br>" +
+            l.contactPhoneLabel + ": " + telLink(p.phone) + "</p>";
+        }).join("") +
         "<h2>" + l.regTitle + "</h2>" +
         "<ul>" + l.regItems.map(function (i) { return "<li>" + i + "</li>"; }).join("") + "</ul>" +
         "<h2>" + l.disputeTitle + "</h2>" +
@@ -180,7 +201,7 @@
         "<h2>" + d.introTitle + "</h2>" +
         "<p>" + d.introText + "</p>" +
         "<h2>" + d.controllerTitle + "</h2>" +
-        "<p>" + d.controllerText + "</p>" +
+        "<p>" + d.controllerAddress + " — " + mailLink(d.controllerEmail) + " " + d.controllerSuffix + "</p>" +
         "<h2>" + d.formTitle + "</h2>" +
         "<p>" + d.formText + "</p>" +
         "<h2>" + d.cookiesTitle + "</h2>" +

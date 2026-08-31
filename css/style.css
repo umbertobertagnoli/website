@@ -827,6 +827,24 @@ section {
 .contact-info-row .value {
   font-weight: 700;
   font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.contact-info-row .value .contact-person {
+  color: var(--color-text-muted);
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.contact-info-row .value a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-info-row .value a:hover,
+.contact-info-row .value a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
 }
 
 .map-placeholder {
@@ -1017,6 +1035,17 @@ section {
 .legal-page ul {
   padding-left: 20px;
   list-style: disc;
+}
+
+.legal-page p a {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.legal-page p a:hover,
+.legal-page p a:focus-visible {
+  text-decoration: underline;
 }
 
 .legal-page a.back-link {

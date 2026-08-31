@@ -135,9 +135,11 @@ const translations = {
         addressLabel: "Standort",
         address: "Wien, Österreich",
         emailLabel: "E-Mail",
-        email: "info@wemakeyoufast.com",
         phoneLabel: "Telefon",
-        phone: "+43 660 123 45 67"
+        people: [
+          { name: "Umberto", email: "umberto@wemakeyoufast.com", phone: "+43 676 850755600" },
+          { name: "Andreas", email: "andreas@wemakeyoufast.com", phone: "+43 676 850755855" }
+        ]
       },
       map: {
         title: "Wien, Österreich",
@@ -161,8 +163,8 @@ const translations = {
         mediaOwnerTitle: "Medieninhaber & Herausgeber",
         mediaOwner: "WeMakeYouFast\nMusterstraße 1, 1010 Wien, Österreich",
         contactTitle: "Kontakt",
-        contactEmail: "E-Mail: info@wemakeyoufast.com",
-        contactPhone: "Telefon: +43 660 123 45 67",
+        contactEmailLabel: "E-Mail",
+        contactPhoneLabel: "Telefon",
         regTitle: "Unternehmensangaben",
         regItems: [
           "Unternehmensgegenstand: Sportwissenschaftliche Leistungsdiagnostik & Trainingsberatung",
@@ -179,7 +181,9 @@ const translations = {
         introTitle: "Allgemeine Hinweise",
         introText: "Der Schutz deiner personenbezogenen Daten ist uns wichtig. Diese Datenschutzerklärung informiert dich darüber, welche Daten wir erheben, wenn du unsere Website besuchst oder das Kontaktformular nutzt, und wie wir damit umgehen.",
         controllerTitle: "Verantwortlicher",
-        controllerText: "WeMakeYouFast, Musterstraße 1, 1010 Wien, Österreich — info@wemakeyoufast.com (Platzhalterangaben)",
+        controllerAddress: "WeMakeYouFast, Musterstraße 1, 1010 Wien, Österreich",
+        controllerEmail: "umberto@wemakeyoufast.com",
+        controllerSuffix: "(Platzhalterangaben)",
         formTitle: "Kontaktformular",
         formText: "Wenn du uns über das Kontaktformular kontaktierst, speichern wir die von dir angegebenen Daten (Name, E-Mail-Adresse, Nachricht) ausschließlich zur Bearbeitung deiner Anfrage und für den Fall von Anschlussfragen.",
         cookiesTitle: "Cookies & Hosting",
@@ -324,9 +328,11 @@ const translations = {
         addressLabel: "Location",
         address: "Vienna, Austria",
         emailLabel: "Email",
-        email: "info@wemakeyoufast.com",
         phoneLabel: "Phone",
-        phone: "+43 660 123 45 67"
+        people: [
+          { name: "Umberto", email: "umberto@wemakeyoufast.com", phone: "+43 676 850755600" },
+          { name: "Andreas", email: "andreas@wemakeyoufast.com", phone: "+43 676 850755855" }
+        ]
       },
       map: {
         title: "Vienna, Austria",
@@ -350,8 +356,8 @@ const translations = {
         mediaOwnerTitle: "Media Owner & Publisher",
         mediaOwner: "WeMakeYouFast\nMusterstraße 1, 1010 Vienna, Austria",
         contactTitle: "Contact",
-        contactEmail: "Email: info@wemakeyoufast.com",
-        contactPhone: "Phone: +43 660 123 45 67",
+        contactEmailLabel: "Email",
+        contactPhoneLabel: "Phone",
         regTitle: "Company Details",
         regItems: [
           "Business purpose: Sports science performance diagnostics & training consulting",
@@ -368,7 +374,9 @@ const translations = {
         introTitle: "General Information",
         introText: "Protecting your personal data matters to us. This privacy policy explains what data we collect when you visit our website or use the contact form, and how we handle it.",
         controllerTitle: "Data Controller",
-        controllerText: "WeMakeYouFast, Musterstraße 1, 1010 Vienna, Austria — info@wemakeyoufast.com (placeholder details)",
+        controllerAddress: "WeMakeYouFast, Musterstraße 1, 1010 Vienna, Austria",
+        controllerEmail: "umberto@wemakeyoufast.com",
+        controllerSuffix: "(placeholder details)",
         formTitle: "Contact Form",
         formText: "If you contact us via the contact form, we store the data you provide (name, email address, message) solely to process your request and for any follow-up questions.",
         cookiesTitle: "Cookies & Hosting",
