@@ -146,7 +146,7 @@ const translations = {
         },
         {
           q: "Wo findet der Test statt?",
-          a: "In Wien. Die genaue Adresse teilen wir dir nach der Terminvereinbarung mit."
+          a: "In der Florian-Berndl-Gasse 16, 1220 Wien. Den Termin vereinbaren wir vorab über das Kontaktformular."
         },
         {
           q: "Wie schnell bekomme ich eine Rückmeldung auf meine Anfrage?",
@@ -170,7 +170,7 @@ const translations = {
       },
       info: {
         addressLabel: "Standort",
-        address: "Wien, Österreich",
+        address: "Florian-Berndl-Gasse 16, 1220 Wien",
         emailLabel: "E-Mail",
         phoneLabel: "Telefon",
         people: [
@@ -179,8 +179,8 @@ const translations = {
         ]
       },
       map: {
-        title: "Wien, Österreich",
-        note: "Genaue Adresse folgt nach Terminvereinbarung"
+        title: "Florian-Berndl-Gasse 16, 1220 Wien",
+        note: "Testtermine nach Vereinbarung"
       }
     },
     footer: {
@@ -198,7 +198,7 @@ const translations = {
         title: "Impressum",
         updated: "Stand: Juli 2026",
         mediaOwnerTitle: "Medieninhaber & Herausgeber",
-        mediaOwner: "WeMakeYouFast\nMusterstraße 1, 1010 Wien, Österreich",
+        mediaOwner: "WeMakeYouFast\nFlorian-Berndl-Gasse 16, 1220 Wien, Österreich",
         contactTitle: "Kontakt",
         contactEmailLabel: "E-Mail",
         contactPhoneLabel: "Telefon",
@@ -218,9 +218,8 @@ const translations = {
         introTitle: "Allgemeine Hinweise",
         introText: "Der Schutz deiner personenbezogenen Daten ist uns wichtig. Diese Datenschutzerklärung informiert dich darüber, welche Daten wir erheben, wenn du unsere Website besuchst oder das Kontaktformular nutzt, und wie wir damit umgehen.",
         controllerTitle: "Verantwortlicher",
-        controllerAddress: "WeMakeYouFast, Musterstraße 1, 1010 Wien, Österreich",
+        controllerAddress: "WeMakeYouFast, Florian-Berndl-Gasse 16, 1220 Wien, Österreich",
         controllerEmail: "umberto@wemakeyoufast.com",
-        controllerSuffix: "(Platzhalterangaben)",
         formTitle: "Kontaktformular",
         formText: "Wenn du uns über das Kontaktformular kontaktierst, speichern wir die von dir angegebenen Daten (Name, E-Mail-Adresse, Nachricht) ausschließlich zur Bearbeitung deiner Anfrage und für den Fall von Anschlussfragen.",
         cookiesTitle: "Cookies & Hosting",
@@ -376,7 +375,7 @@ const translations = {
         },
         {
           q: "Where does the test take place?",
-          a: "In Vienna. We'll share the exact address once your appointment is confirmed."
+          a: "At Florian-Berndl-Gasse 16, 1220 Vienna. We arrange the appointment in advance via the contact form."
         },
         {
           q: "How quickly will you reply to my enquiry?",
@@ -400,7 +399,7 @@ const translations = {
       },
       info: {
         addressLabel: "Location",
-        address: "Vienna, Austria",
+        address: "Florian-Berndl-Gasse 16, 1220 Vienna",
         emailLabel: "Email",
         phoneLabel: "Phone",
         people: [
@@ -409,8 +408,8 @@ const translations = {
         ]
       },
       map: {
-        title: "Vienna, Austria",
-        note: "Exact address provided upon booking"
+        title: "Florian-Berndl-Gasse 16, 1220 Vienna",
+        note: "Test appointments by arrangement"
       }
     },
     footer: {
@@ -428,7 +427,7 @@ const translations = {
         title: "Impressum",
         updated: "Last updated: July 2026",
         mediaOwnerTitle: "Media Owner & Publisher",
-        mediaOwner: "WeMakeYouFast\nMusterstraße 1, 1010 Vienna, Austria",
+        mediaOwner: "WeMakeYouFast\nFlorian-Berndl-Gasse 16, 1220 Vienna, Austria",
         contactTitle: "Contact",
         contactEmailLabel: "Email",
         contactPhoneLabel: "Phone",
@@ -448,9 +447,8 @@ const translations = {
         introTitle: "General Information",
         introText: "Protecting your personal data matters to us. This privacy policy explains what data we collect when you visit our website or use the contact form, and how we handle it.",
         controllerTitle: "Data Controller",
-        controllerAddress: "WeMakeYouFast, Musterstraße 1, 1010 Vienna, Austria",
+        controllerAddress: "WeMakeYouFast, Florian-Berndl-Gasse 16, 1220 Vienna, Austria",
         controllerEmail: "umberto@wemakeyoufast.com",
-        controllerSuffix: "(placeholder details)",
         formTitle: "Contact Form",
         formText: "If you contact us via the contact form, we store the data you provide (name, email address, message) solely to process your request and for any follow-up questions.",
         cookiesTitle: "Cookies & Hosting",

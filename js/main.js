@@ -217,7 +217,7 @@
         "<h2>" + d.introTitle + "</h2>" +
         "<p>" + d.introText + "</p>" +
         "<h2>" + d.controllerTitle + "</h2>" +
-        "<p>" + d.controllerAddress + " — " + mailLink(d.controllerEmail) + " " + d.controllerSuffix + "</p>" +
+        "<p>" + d.controllerAddress + " — " + mailLink(d.controllerEmail) + "</p>" +
         "<h2>" + d.formTitle + "</h2>" +
         "<p>" + d.formText + "</p>" +
         "<h2>" + d.cookiesTitle + "</h2>" +
