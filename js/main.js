@@ -4,6 +4,28 @@
   var STORAGE_KEY = "wemakeyoufast-lang";
   var currentLang = localStorage.getItem(STORAGE_KEY) || "de";
 
+  // Bildpfade ohne Endung, in der Reihenfolge der Ablauf-Schritte. Der vierte
+  // Schritt (Report) hat kein Foto und bekommt eine dekorative Fläche.
+  var STEP_IMAGES = [
+    "img/testing/handschlag-karl",
+    "img/testing/ergometer-laptop",
+    "img/testing/blutabnahme-karl",
+    null
+  ];
+
+  // 1920er Fassung plus 960er für schmale Viewports.
+  function responsiveImg(base, alt, sizes, opts) {
+    opts = opts || {};
+    return (
+      '<img src="' + base + '.jpg"' +
+      ' srcset="' + base + '-960.jpg 960w, ' + base + '.jpg 1920w"' +
+      ' sizes="' + sizes + '"' +
+      ' width="1920" height="1280" decoding="async"' +
+      (opts.eager ? ' fetchpriority="high"' : ' loading="lazy"') +
+      ' alt="' + alt + '">'
+    );
+  }
+
   function getPath(obj, path) {
     return path.split(".").reduce(function (acc, key) {
       return acc && acc[key] !== undefined ? acc[key] : undefined;
@@ -54,6 +76,10 @@
       var value = getPath(dict, el.getAttribute("data-i18n-placeholder"));
       if (value !== undefined) el.setAttribute("placeholder", value);
     });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var value = getPath(dict, el.getAttribute("data-i18n-alt"));
+      if (value !== undefined) el.setAttribute("alt", value);
+    });
   }
 
   function renderHeroChips(dict) {
@@ -96,16 +122,47 @@
     if (!wrap) return;
     wrap.innerHTML = dict.how.steps
       .map(function (step, i) {
+        var media = STEP_IMAGES[i]
+          ? '<div class="step-media">' +
+            responsiveImg(STEP_IMAGES[i], step.alt, "(max-width: 760px) 100vw, (max-width: 980px) 46vw, 24vw") +
+            "</div>"
+          : '<div class="step-media step-media-blank" aria-hidden="true">' + icon("check") + "</div>";
         return (
           '<div class="step-card" data-reveal>' +
+          media +
+          '<div class="step-body">' +
           '<div class="step-number">' + (i + 1) + "</div>" +
           "<h3>" + step.title + "</h3>" +
           "<p>" + step.desc + "</p>" +
-          "</div>"
+          "</div></div>"
         );
       })
       .join("");
     observeReveal(wrap.querySelectorAll("[data-reveal]"));
+  }
+
+  function renderUeberUns(dict) {
+    var stats = document.querySelector("[data-ueber-uns-stats]");
+    if (stats) {
+      stats.innerHTML = dict.ueberUns.stats
+        .map(function (s) {
+          return (
+            '<div class="stat-card" data-reveal>' +
+            '<div class="stat-value">' + s.value + "</div>" +
+            '<div class="stat-label">' + s.label + "</div>" +
+            "</div>"
+          );
+        })
+        .join("");
+      observeReveal(stats.querySelectorAll("[data-reveal]"));
+    }
+
+    var text = document.querySelector("[data-ueber-uns-text]");
+    if (text) {
+      text.innerHTML = dict.ueberUns.paragraphs
+        .map(function (p) { return "<p>" + p + "</p>"; })
+        .join("");
+    }
   }
 
   function renderPricing(dict) {
@@ -268,6 +325,7 @@
     renderStaticText(dict);
     renderHeroChips(dict);
     renderSteps(dict);
+    renderUeberUns(dict);
     renderPricing(dict);
     renderTestimonials(dict);
     renderFaq(dict);
@@ -352,7 +410,7 @@
   }
 
   function initStaticReveal() {
-    observeReveal(document.querySelectorAll("section [data-reveal]:not([data-steps] *):not([data-pricing] *):not([data-testimonials] *):not([data-faq] *)"));
+    observeReveal(document.querySelectorAll("section [data-reveal]:not([data-steps] *):not([data-pricing] *):not([data-testimonials] *):not([data-faq] *):not([data-ueber-uns-stats] *)"));
   }
 
   function initFooterYear() {

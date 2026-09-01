@@ -16,13 +16,14 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#home" class="logo">
-        <span class="logo-mark">We</span><span>MakeYouFast</span>
+        <img src="img/logo/logo-3-mixed-weight.svg" class="logo-img" data-i18n-alt="brand.logoAlt" alt="WeMakeYouFast — zur Startseite" width="498" height="85" />
       </a>
 
       <nav class="main-nav" data-main-nav>
         <a href="#home" data-i18n="nav.home">Start</a>
         <a href="#about" data-i18n="nav.about">Leistungen</a>
         <a href="#how" data-i18n="nav.how">Ablauf</a>
+        <a href="#ueber-uns" data-i18n="nav.ueberUns">Über uns</a>
         <a href="#pricing" data-i18n="nav.pricing">Preise</a>
         <a href="#testimonials" data-i18n="nav.testimonials">Stimmen</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
@@ -67,14 +68,12 @@
           <div class="hero-chips" data-hero-chips></div>
         </div>
         <div class="hero-visual" data-reveal="fade">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polyline points="10,150 45,150 60,90 80,175 100,60 120,150 140,110 160,150 190,150"
-              stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
-            <circle cx="100" cy="60" r="6" fill="#ffffff"/>
-            <circle cx="60" cy="90" r="4" fill="#ffffff" opacity="0.7"/>
-            <circle cx="140" cy="110" r="4" fill="#ffffff" opacity="0.7"/>
-            <line x1="10" y1="150" x2="190" y2="150" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
-          </svg>
+          <img src="img/hero/laeufer-nazar.jpg"
+            srcset="img/hero/laeufer-nazar-960.jpg 960w, img/hero/laeufer-nazar.jpg 1920w"
+            sizes="(max-width: 980px) 420px, 42vw"
+            width="1920" height="1280" fetchpriority="high" decoding="async"
+            data-i18n-alt="hero.imageAlt"
+            alt="Läufer mit Sportbrille beim Lauftraining auf einem Uferweg am Wasser" />
         </div>
       </div>
     </section>
@@ -104,6 +103,31 @@
           <p data-i18n="how.subtitle">Vom ersten Gespräch bis zu deinem persönlichen Trainingsbereichs-Report.</p>
         </div>
         <div class="steps" data-steps></div>
+      </div>
+    </section>
+
+    <!-- Über uns -->
+    <section id="ueber-uns" class="ueber-uns">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow" data-i18n="ueberUns.eyebrow">Über uns</span>
+          <h2 data-i18n="ueberUns.title">Warum wir keine Standardpläne schreiben</h2>
+        </div>
+
+        <h3 class="stats-title" data-reveal data-i18n="ueberUns.statsTitle">Erfolgsbilanz</h3>
+        <div class="stats-grid" data-ueber-uns-stats></div>
+
+        <div class="ueber-uns-grid">
+          <div class="ueber-uns-text" data-ueber-uns-text data-reveal></div>
+          <figure class="ueber-uns-figure" data-reveal>
+            <img src="img/team/leonie-laufen.jpg"
+              srcset="img/team/leonie-laufen-960.jpg 960w, img/team/leonie-laufen.jpg 1920w"
+              sizes="(max-width: 980px) 100vw, 44vw"
+              width="1920" height="1280" loading="lazy" decoding="async"
+              data-i18n-alt="ueberUns.imageAlt"
+              alt="Athletin im blauen Nationaltrikot beim Lauftraining, im Hintergrund die Wiener Skyline" />
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -190,7 +214,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#home" class="logo">
-            <span class="logo-mark">We</span><span>MakeYouFast</span>
+            <img src="img/logo/logo-white.svg" class="logo-img" data-i18n-alt="brand.logoAlt" alt="WeMakeYouFast — zur Startseite" width="498" height="85" />
           </a>
           <p data-i18n="footer.tagline">Laktatdiagnostik & Trainingsplanung in Wien.</p>
         </div>

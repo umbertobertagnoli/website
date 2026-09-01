@@ -6,10 +6,14 @@ const translations = {
       langLabel: "DE",
       htmlLang: "de"
     },
+    brand: {
+      logoAlt: "WeMakeYouFast — zur Startseite"
+    },
     nav: {
       home: "Start",
       about: "Leistungen",
       how: "Ablauf",
+      ueberUns: "Über uns",
       pricing: "Preise",
       testimonials: "Stimmen",
       faq: "FAQ",
@@ -22,7 +26,8 @@ const translations = {
       subtitle: "Finde deine exakten Trainingsbereiche per Laktattest und trainiere ab morgen zielgerichtet statt auf Verdacht — für Läufer:innen, Radfahrer:innen, Ruderer:innen und Triathlet:innen in Wien.",
       cta: "Termin buchen",
       secondary: "Mehr erfahren",
-      chips: ["Individuelle Trainingsbereiche", "Wissenschaftliche Methode", "Persönliche Betreuung"]
+      chips: ["Individuelle Trainingsbereiche", "Wissenschaftliche Methode", "Persönliche Betreuung"],
+      imageAlt: "Läufer mit Sportbrille beim Lauftraining auf einem Uferweg am Wasser"
     },
     about: {
       eyebrow: "Leistungen",
@@ -35,11 +40,45 @@ const translations = {
       title: "So läuft dein Test ab",
       subtitle: "Vom ersten Gespräch bis zu deinem persönlichen Trainingsbereichs-Report.",
       steps: [
-        { title: "Beratungsgespräch", desc: "Wir besprechen deinen Trainingsstand, deine Ziele und die passende Testmethode." },
-        { title: "Stufentest", desc: "Ein individuell angepasster Stufentest auf Laufband, Rad oder Ergometer bis zur Ausbelastung." },
-        { title: "Laktatanalyse", desc: "Auswertung der Laktat-, Herzfrequenz- und Leistungsdaten aus deinem Test." },
-        { title: "Trainingsbereiche-Report", desc: "Du erhältst deinen persönlichen Report mit klar definierten Trainingszonen." }
+        {
+          title: "Beratungsgespräch",
+          desc: "Wir besprechen deinen Trainingsstand, deine Ziele und die passende Testmethode.",
+          alt: "Trainer und Athlet im Gespräch vor dem Test auf einem Uferweg"
+        },
+        {
+          title: "Stufentest",
+          desc: "Ein individuell angepasster Stufentest auf Laufband, Rad oder Ergometer bis zur Ausbelastung.",
+          alt: "Athlet mit Atemgasmaske auf dem Ergometer, daneben wird der Test am Laptop überwacht"
+        },
+        {
+          title: "Laktatanalyse",
+          desc: "Auswertung der Laktat-, Herzfrequenz- und Leistungsdaten aus deinem Test.",
+          alt: "Laktatprobe wird mit Handschuhen aus dem Ohrläppchen eines Athleten entnommen"
+        },
+        {
+          title: "Trainingsbereiche-Report",
+          desc: "Du erhältst deinen persönlichen Report mit klar definierten Trainingszonen."
+        }
       ]
+    },
+    ueberUns: {
+      eyebrow: "Über uns",
+      title: "Warum wir keine Standardpläne schreiben",
+      statsTitle: "Erfolgsbilanz",
+      stats: [
+        { value: "100+", label: "betreute Athlet:innen" },
+        { value: "30", label: "Staatsmeistertitel" },
+        { value: "1", label: "Coastal-Titel" },
+        { value: "7", label: "Indoor-Titel" },
+        { value: "4", label: "U19-EM-Medaillen" }
+      ],
+      paragraphs: [
+        "„Norwegisches 4x4“, „Double Threshold“, „30/15“, „Zone 2“: Trainingsformate, die auf Social Media als Allheilmittel gehandelt werden. Das Problem: Sie ignorieren, wo du tatsächlich stehst. Dieselbe Einheit kann bei zwei Athlet:innen völlig gegensätzliche Effekte haben.",
+        "Dazu kommt: Mit einem klassischen Stufentest allein lässt sich nur grob abschätzen, wo deine Zonen wirklich liegen. Die gängigen Schwellenmodelle arbeiten mit Faustformeln und festen Laktatwerten, die von Mensch zu Mensch deutlich danebenliegen können. Wer auf dieser Basis trainiert, trifft die richtige Intensität bestenfalls zufällig.",
+        "Deshalb messen wir mit State-of-the-Art-Technologie: kombinierte Laktat- und Atemgasanalyse (VO2max, FatMax, VLamax) statt Schätzwerten. So bekommst du deine tatsächlichen Zonen, nicht die aus einer Tabelle.",
+        "Und deshalb setzen wir uns laufend mit der aktuellen Sportwissenschaft auseinander und leiten deinen Plan aus deinen echten Messwerten ab: deine Zonen, deine Stärken, dein Verbesserungspotential. Maßgeschneidert statt Copy-Paste."
+      ],
+      imageAlt: "Athletin im blauen Nationaltrikot beim Lauftraining, im Hintergrund die Wiener Skyline"
     },
     pricing: {
       eyebrow: "Preise",
@@ -235,10 +274,14 @@ const translations = {
       langLabel: "EN",
       htmlLang: "en"
     },
+    brand: {
+      logoAlt: "WeMakeYouFast — back to homepage"
+    },
     nav: {
       home: "Home",
       about: "Services",
       how: "How it works",
+      ueberUns: "About us",
       pricing: "Pricing",
       testimonials: "Testimonials",
       faq: "FAQ",
@@ -251,7 +294,8 @@ const translations = {
       subtitle: "Discover your exact training zones through lactate testing and start training with purpose tomorrow — for runners, cyclists, rowers and triathletes in Vienna.",
       cta: "Book Appointment",
       secondary: "Learn more",
-      chips: ["Personalised training zones", "Evidence-based method", "One-on-one guidance"]
+      chips: ["Personalised training zones", "Evidence-based method", "One-on-one guidance"],
+      imageAlt: "Runner in sports sunglasses training on a waterside path"
     },
     about: {
       eyebrow: "Services",
@@ -264,11 +308,45 @@ const translations = {
       title: "How Your Test Works",
       subtitle: "From your first conversation to your personal training zones report.",
       steps: [
-        { title: "Consultation", desc: "We discuss your training background, your goals, and the right test for you." },
-        { title: "Step Test", desc: "A graded test on a treadmill, bike, or ergometer, tailored to your fitness and taken to maximal effort." },
-        { title: "Lactate Analysis", desc: "Your lactate, heart rate, and power data are analysed in detail." },
-        { title: "Training Zones Report", desc: "You receive a personal report with clearly defined training zones." }
+        {
+          title: "Consultation",
+          desc: "We discuss your training background, your goals, and the right test for you.",
+          alt: "Coach and athlete talking before the test on a waterside path"
+        },
+        {
+          title: "Step Test",
+          desc: "A graded test on a treadmill, bike, or ergometer, tailored to your fitness and taken to maximal effort.",
+          alt: "Athlete wearing a respiratory gas mask on the ergometer while the test is monitored on a laptop"
+        },
+        {
+          title: "Lactate Analysis",
+          desc: "Your lactate, heart rate, and power data are analysed in detail.",
+          alt: "A lactate sample being taken from an athlete's earlobe with gloved hands"
+        },
+        {
+          title: "Training Zones Report",
+          desc: "You receive a personal report with clearly defined training zones."
+        }
       ]
+    },
+    ueberUns: {
+      eyebrow: "About us",
+      title: "Why we don't write template plans",
+      statsTitle: "Track record",
+      stats: [
+        { value: "100+", label: "athletes coached" },
+        { value: "30", label: "national championship titles" },
+        { value: "1", label: "coastal title" },
+        { value: "7", label: "indoor titles" },
+        { value: "4", label: "U19 European Championship medals" }
+      ],
+      paragraphs: [
+        "“Norwegian 4x4”, “double threshold”, “30/15”, “Zone 2”: training formats sold on social media as universal solutions. The problem: they ignore where you actually stand. The same session can have opposite effects on two different athletes.",
+        "On top of that: a standard step test alone only gives you a rough estimate of where your zones actually lie. The common threshold models rely on rules of thumb and fixed lactate values that can be significantly off from one person to the next. Train on that basis and you'll hit the right intensity by chance at best.",
+        "That's why we measure with state-of-the-art technology: combined lactate and respiratory gas analysis (VO2max, FatMax, VLamax) instead of estimates. You get your actual zones, not the ones from a table.",
+        "And that's why we stay close to current sports science and build your plan from your real data: your zones, your strengths, your room for improvement. Tailored, not copy-paste."
+      ],
+      imageAlt: "Athlete in a blue national team kit running, with the Vienna skyline in the background"
     },
     pricing: {
       eyebrow: "Pricing",

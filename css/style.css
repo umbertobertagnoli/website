@@ -180,41 +180,37 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
   width: 100%;
 }
 
 .logo {
   display: flex;
-  align-items: baseline;
-  gap: 8px;
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: -0.01em;
+  align-items: center;
+  flex-shrink: 0;
   text-decoration: none;
   color: var(--color-text);
 }
 
-.logo .logo-mark {
-  color: var(--color-accent);
-}
-
-.logo .logo-dot {
-  color: var(--color-accent);
+.logo-img {
+  height: 28px;
+  width: auto;
+  flex-shrink: 0;
 }
 
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 2px;
 }
 
 .main-nav a {
   display: block;
-  padding: 10px 14px;
+  padding: 10px 10px;
   border-radius: 999px;
   font-size: 0.95rem;
   font-weight: 600;
+  white-space: nowrap;
   text-decoration: none;
   color: var(--color-text-muted);
   transition: background 0.15s ease, color 0.15s ease;
@@ -399,9 +395,10 @@ section {
   justify-content: center;
 }
 
-.hero-visual svg {
-  width: 78%;
-  height: 78%;
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ---------- About ---------- */
@@ -431,10 +428,40 @@ section {
 
 .step-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 30px 24px;
+  overflow: hidden;
+}
+
+.step-media {
+  aspect-ratio: 3 / 2;
+  background: var(--color-bg-alt);
+}
+
+.step-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.step-media-blank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(155deg, var(--color-dark) 0%, var(--color-accent-dark) 100%);
+  color: #fff;
+}
+
+.step-media-blank svg {
+  width: 34px;
+  height: 34px;
+}
+
+.step-body {
+  padding: 26px 24px 30px;
 }
 
 .step-number {
@@ -464,6 +491,82 @@ section {
 
 .step-connector {
   display: none;
+}
+
+/* ---------- Über uns ---------- */
+
+.stats-title {
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.stat-card {
+  padding: 30px 16px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(155deg, var(--color-dark) 0%, var(--color-accent-dark) 100%);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  color: #fff;
+}
+
+.stat-value {
+  font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.stat-label {
+  margin-top: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.35;
+}
+
+.ueber-uns-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.ueber-uns-text p {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+
+.ueber-uns-text p:last-child {
+  margin-bottom: 0;
+}
+
+.ueber-uns-figure {
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+}
+
+.ueber-uns-figure img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
 }
 
 /* ---------- Pricing ---------- */
@@ -989,6 +1092,10 @@ section {
   margin-bottom: 14px;
 }
 
+.footer-brand .logo-img {
+  height: 34px;
+}
+
 .footer-brand p {
   font-size: 0.92rem;
   max-width: 320px;
@@ -1176,6 +1283,21 @@ section {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 48px;
+  }
+
+  .ueber-uns-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .ueber-uns-figure {
+    position: static;
+    order: -1;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1185,7 +1307,9 @@ section {
   }
 }
 
-@media (max-width: 760px) {
+/* Acht Navigationspunkte plus Sprachumschalter und CTA passen erst oberhalb
+   von ~1180px nebeneinander — darunter das Burger-Menü. */
+@media (max-width: 1180px) {
   .main-nav {
     position: fixed;
     top: var(--header-height);
@@ -1226,7 +1350,9 @@ section {
   .nav-toggle {
     display: flex;
   }
+}
 
+@media (max-width: 760px) {
   section {
     padding: 72px 0;
   }
@@ -1235,6 +1361,19 @@ section {
   .pricing-grid,
   .testimonial-grid {
     grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 22px 12px;
+  }
+
+  .logo-img {
+    height: 24px;
   }
 
   .pricing-addon {
