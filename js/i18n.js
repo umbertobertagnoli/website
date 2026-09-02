@@ -89,6 +89,7 @@ const translations = {
           paragraphs: [
             "„Norwegisches 4x4“, „Double Threshold“, „30/15“, „Zone 2“: Trainingsformate, die auf Social Media als Allheilmittel gehandelt werden. Das Problem: Sie ignorieren, wo du tatsächlich stehst. Dieselbe Einheit kann bei zwei Athlet:innen völlig gegensätzliche Effekte haben.",
             "Dazu kommt: Mit einem klassischen Stufentest allein lässt sich nur grob abschätzen, wo deine Zonen wirklich liegen. Die gängigen Schwellenmodelle arbeiten mit Faustformeln und festen Laktatwerten, die von Mensch zu Mensch deutlich danebenliegen können.",
+            "Dazu messen wir, wie viele Kohlenhydrate und wie viele Kalorien du in jeder Zone tatsächlich verbrennst. Das entscheidet mit darüber, wie lange du eine Intensität durchhältst, wie du dich im Wettkampf verpflegen musst und wann dein Training kippt. Ohne diese Werte bleibt jede Trainingssteuerung eine Raterei.",
             "Deshalb leiten wir deinen Plan aus deinen echten Messwerten ab: deine Zonen, deine Stärken, dein Verbesserungspotential. Maßgeschneidert statt Copy-Paste."
           ]
         }
@@ -133,6 +134,7 @@ const translations = {
           features: [
             "Alles aus Basic",
             "VO2max, FatMax und VLamax",
+            "Messung von Kohlenhydrat- und Kalorienverbrauch in jeder Zone",
             "Detaillierte Potentialanalyse: wo du stehst und wo am meisten drin ist",
             "Ausführlicher schriftlicher Report zum Mitnehmen",
             "Persönliches Auswertungsgespräch, in dem du alles verstehst",
@@ -386,6 +388,7 @@ const translations = {
           paragraphs: [
             "“Norwegian 4x4”, “double threshold”, “30/15”, “Zone 2”: training formats sold on social media as universal solutions. The problem: they ignore where you actually stand. The same session can have opposite effects on two different athletes.",
             "On top of that: a standard step test alone only gives you a rough estimate of where your zones actually lie. The common threshold models rely on rules of thumb and fixed lactate values that can be significantly off from one person to the next.",
+            "On top of that, we measure how many carbohydrates and how many calories you actually burn in each zone. That determines how long you can hold an intensity, how you need to fuel in competition and when a session starts working against you. Without those numbers, any training prescription stays guesswork.",
             "That's why we build your plan from your real data: your zones, your strengths, your room for improvement. Tailored, not copy-paste."
           ]
         }
@@ -430,6 +433,7 @@ const translations = {
           features: [
             "Everything from Basic",
             "VO2max, FatMax and VLamax",
+            "Measurement of carbohydrate and calorie consumption in every zone",
             "Detailed potential analysis: where you stand and where the biggest gains are",
             "Detailed written report to take home",
             "Personal results consultation where everything gets explained",
