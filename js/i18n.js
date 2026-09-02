@@ -48,7 +48,7 @@ const translations = {
         {
           title: "Stufentest",
           desc: "Ein individuell angepasster Stufentest auf Laufband, Rad oder Ergometer bis zur Ausbelastung.",
-          alt: "Athlet mit Atemgasmaske auf dem Ergometer, daneben wird der Test am Laptop überwacht"
+          alt: "Athlet mit Atemmaske auf dem Ergometer, daneben wird der Test am Laptop überwacht"
         },
         {
           title: "Laktatanalyse",
@@ -64,21 +64,44 @@ const translations = {
     },
     ueberUns: {
       eyebrow: "Über uns",
-      title: "Warum wir keine Standardpläne schreiben",
+      title: "Wer wir sind",
+      intro: [
+        "Wir sind Andreas und Umberto, zwei Brüder aus dem Leistungsrudern. Umberto ist seit 2012 dabei, Andreas seit 2019. Umberto studiert im sechsten Jahr Medizin, Andreas rudert weiterhin erfolgreich auf nationaler und internationaler Ebene.",
+        "Als Trainer haben wir über 100 Athlet:innen betreut und dabei 30 Staatsmeistertitel im Flachwasserrudern, einen Costal-Titel, sieben Indoor-Meistertitel und vier U19-EM-Medaillen begleitet."
+      ],
       statsTitle: "Erfolgsbilanz",
       stats: [
         { value: "100+", label: "betreute Athlet:innen" },
         { value: "30", label: "Staatsmeistertitel" },
-        { value: "1", label: "Coastal-Titel" },
+        { value: "1", label: "Costal-Titel" },
         { value: "7", label: "Indoor-Titel" },
         { value: "4", label: "U19-EM-Medaillen" }
       ],
-      paragraphs: [
-        "„Norwegisches 4x4“, „Double Threshold“, „30/15“, „Zone 2“: Trainingsformate, die auf Social Media als Allheilmittel gehandelt werden. Das Problem: Sie ignorieren, wo du tatsächlich stehst. Dieselbe Einheit kann bei zwei Athlet:innen völlig gegensätzliche Effekte haben.",
-        "Dazu kommt: Mit einem klassischen Stufentest allein lässt sich nur grob abschätzen, wo deine Zonen wirklich liegen. Die gängigen Schwellenmodelle arbeiten mit Faustformeln und festen Laktatwerten, die von Mensch zu Mensch deutlich danebenliegen können. Wer auf dieser Basis trainiert, trifft die richtige Intensität bestenfalls zufällig.",
-        "Deshalb messen wir mit State-of-the-Art-Technologie: kombinierte Laktat- und Atemgasanalyse (VO2max, FatMax, VLamax) statt Schätzwerten. So bekommst du deine tatsächlichen Zonen, nicht die aus einer Tabelle.",
-        "Und deshalb setzen wir uns laufend mit der aktuellen Sportwissenschaft auseinander und leiten deinen Plan aus deinen echten Messwerten ab: deine Zonen, deine Stärken, dein Verbesserungspotential. Maßgeschneidert statt Copy-Paste."
+      blocks: [
+        {
+          title: "Unser Anliegen",
+          paragraphs: [
+            "Wir wollen dich schnell machen, ohne dass der Spaß dabei verloren geht. Effizientes Training heißt für uns: Jede Einheit zahlt sich aus. Keine leeren Kilometer, keine Zeit im falschen Bereich."
+          ]
+        },
+        {
+          title: "Warum wir keine Standardpläne schreiben",
+          paragraphs: [
+            "„Norwegisches 4x4“, „Double Threshold“, „30/15“, „Zone 2“: Trainingsformate, die auf Social Media als Allheilmittel gehandelt werden. Das Problem: Sie ignorieren, wo du tatsächlich stehst. Dieselbe Einheit kann bei zwei Athlet:innen völlig gegensätzliche Effekte haben.",
+            "Dazu kommt: Mit einem klassischen Stufentest allein lässt sich nur grob abschätzen, wo deine Zonen wirklich liegen. Die gängigen Schwellenmodelle arbeiten mit Faustformeln und festen Laktatwerten, die von Mensch zu Mensch deutlich danebenliegen können.",
+            "Deshalb leiten wir deinen Plan aus deinen echten Messwerten ab: deine Zonen, deine Stärken, dein Verbesserungspotential. Maßgeschneidert statt Copy-Paste."
+          ]
+        }
       ],
+      audience: {
+        title: "Für wen wir arbeiten",
+        items: [
+          "Für Leistungssportler:innen, die ihren Peak erreichen wollen und bereit sind, alles zu geben.",
+          "Für Hobbysportler:innen, deren Trainingszeit knapp ist und die jede Stunde optimal nutzen wollen.",
+          "Für alle, die auf ihre Gesundheit schauen und sich im Alltag spürbar fitter fühlen wollen.",
+          "Für alle, die nach längerer Pause wieder mit Sport anfangen und dabei von Anfang an das Richtige tun wollen."
+        ]
+      },
       imageAlt: "Athletin im blauen Nationaltrikot beim Lauftraining, im Hintergrund die Wiener Skyline"
     },
     pricing: {
@@ -109,7 +132,7 @@ const translations = {
           desc: "Das volle Bild deiner Physiologie. Du siehst nicht nur, wo deine Zonen liegen, sondern warum sie dort liegen und was sich am schnellsten verbessern lässt.",
           features: [
             "Alles aus Basic",
-            "Atemgasanalyse: VO2max, FatMax und VLamax",
+            "VO2max, FatMax und VLamax",
             "Detaillierte Potentialanalyse: wo du stehst und wo am meisten drin ist",
             "Ausführlicher schriftlicher Report zum Mitnehmen",
             "Persönliches Auswertungsgespräch, in dem du alles verstehst",
@@ -135,7 +158,7 @@ const translations = {
           highlighted: false
         }
       ],
-      trustNote: "Keine versteckten Kosten. Keine Abo-Falle. Wenn wir nach dem Gespräch der Meinung sind, dass dir ein Test aktuell nichts bringt, sagen wir dir das.",
+      trustNote: "Keine versteckten Kosten. Keine Abo-Falle.",
       addon: {
         title: "Laufende Trainingsplanung",
         price: "69 € / Monat",
@@ -322,7 +345,7 @@ const translations = {
         {
           title: "Step Test",
           desc: "A graded test on a treadmill, bike, or ergometer, tailored to your fitness and taken to maximal effort.",
-          alt: "Athlete wearing a respiratory gas mask on the ergometer while the test is monitored on a laptop"
+          alt: "Athlete wearing a breathing mask on the ergometer while the test is monitored on a laptop"
         },
         {
           title: "Lactate Analysis",
@@ -338,21 +361,44 @@ const translations = {
     },
     ueberUns: {
       eyebrow: "About us",
-      title: "Why we don't write template plans",
+      title: "Who we are",
+      intro: [
+        "We're Andreas and Umberto, two brothers from competitive rowing. Umberto has been at it since 2012, Andreas since 2019. Umberto is in his sixth year of medical school, Andreas continues to row successfully at national and international level.",
+        "As coaches we've worked with over 100 athletes, supporting 30 national titles in flatwater rowing, one costal title, seven indoor championship titles and four U19 European Championship medals."
+      ],
       statsTitle: "Track record",
       stats: [
         { value: "100+", label: "athletes coached" },
         { value: "30", label: "national championship titles" },
-        { value: "1", label: "coastal title" },
+        { value: "1", label: "costal title" },
         { value: "7", label: "indoor titles" },
         { value: "4", label: "U19 European Championship medals" }
       ],
-      paragraphs: [
-        "“Norwegian 4x4”, “double threshold”, “30/15”, “Zone 2”: training formats sold on social media as universal solutions. The problem: they ignore where you actually stand. The same session can have opposite effects on two different athletes.",
-        "On top of that: a standard step test alone only gives you a rough estimate of where your zones actually lie. The common threshold models rely on rules of thumb and fixed lactate values that can be significantly off from one person to the next. Train on that basis and you'll hit the right intensity by chance at best.",
-        "That's why we measure with state-of-the-art technology: combined lactate and respiratory gas analysis (VO2max, FatMax, VLamax) instead of estimates. You get your actual zones, not the ones from a table.",
-        "And that's why we stay close to current sports science and build your plan from your real data: your zones, your strengths, your room for improvement. Tailored, not copy-paste."
+      blocks: [
+        {
+          title: "What we're after",
+          paragraphs: [
+            "We want to make you fast without the fun getting lost along the way. Efficient training means every session pays off. No empty kilometres, no time spent in the wrong zone."
+          ]
+        },
+        {
+          title: "Why we don't write template plans",
+          paragraphs: [
+            "“Norwegian 4x4”, “double threshold”, “30/15”, “Zone 2”: training formats sold on social media as universal solutions. The problem: they ignore where you actually stand. The same session can have opposite effects on two different athletes.",
+            "On top of that: a standard step test alone only gives you a rough estimate of where your zones actually lie. The common threshold models rely on rules of thumb and fixed lactate values that can be significantly off from one person to the next.",
+            "That's why we build your plan from your real data: your zones, your strengths, your room for improvement. Tailored, not copy-paste."
+          ]
+        }
       ],
+      audience: {
+        title: "Who we work with",
+        items: [
+          "Competitive athletes aiming for their peak and ready to give everything.",
+          "Recreational athletes with limited training time who want every hour to count.",
+          "Anyone focused on their health who wants to feel noticeably fitter in everyday life.",
+          "Anyone returning to sport after a longer break who wants to do it right from the start."
+        ]
+      },
       imageAlt: "Athlete in a blue national team kit running, with the Vienna skyline in the background"
     },
     pricing: {
@@ -383,7 +429,7 @@ const translations = {
           desc: "The full picture of your physiology. You see not just where your zones are, but why they're there and what will improve fastest.",
           features: [
             "Everything from Basic",
-            "Respiratory gas analysis: VO2max, FatMax and VLamax",
+            "VO2max, FatMax and VLamax",
             "Detailed potential analysis: where you stand and where the biggest gains are",
             "Detailed written report to take home",
             "Personal results consultation where everything gets explained",
@@ -409,7 +455,7 @@ const translations = {
           highlighted: false
         }
       ],
-      trustNote: "No hidden costs. No subscription traps. If we think a test won't help you right now, we'll tell you.",
+      trustNote: "No hidden costs. No subscription traps.",
       addon: {
         title: "Ongoing Training Plan",
         price: "€69 / month",

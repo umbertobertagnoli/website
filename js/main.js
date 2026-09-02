@@ -146,6 +146,10 @@
     observeReveal(wrap.querySelectorAll("[data-reveal]"));
   }
 
+  function paragraphs(list) {
+    return list.map(function (p) { return "<p>" + p + "</p>"; }).join("");
+  }
+
   function renderUeberUns(dict) {
     var stats = document.querySelector("[data-ueber-uns-stats]");
     if (stats) {
@@ -162,11 +166,41 @@
       observeReveal(stats.querySelectorAll("[data-reveal]"));
     }
 
-    var text = document.querySelector("[data-ueber-uns-text]");
-    if (text) {
-      text.innerHTML = dict.ueberUns.paragraphs
-        .map(function (p) { return "<p>" + p + "</p>"; })
+    var intro = document.querySelector("[data-ueber-uns-intro]");
+    if (intro) intro.innerHTML = paragraphs(dict.ueberUns.intro);
+
+    var blocks = document.querySelector("[data-ueber-uns-blocks]");
+    if (blocks) {
+      blocks.innerHTML = dict.ueberUns.blocks
+        .map(function (b) {
+          return (
+            '<div class="ueber-uns-block" data-reveal>' +
+            "<h3>" + b.title + "</h3>" +
+            paragraphs(b.paragraphs) +
+            "</div>"
+          );
+        })
         .join("");
+      observeReveal(blocks.querySelectorAll("[data-reveal]"));
+    }
+
+    var audience = document.querySelector("[data-ueber-uns-audience]");
+    if (audience) {
+      audience.innerHTML =
+        '<h3 data-reveal>' + dict.ueberUns.audience.title + "</h3>" +
+        '<div class="audience-grid">' +
+        dict.ueberUns.audience.items
+          .map(function (item) {
+            return (
+              '<div class="audience-card" data-reveal>' +
+              '<span class="audience-icon">' + icon("check") + "</span>" +
+              "<p>" + item + "</p>" +
+              "</div>"
+            );
+          })
+          .join("") +
+        "</div>";
+      observeReveal(audience.querySelectorAll("[data-reveal]"));
     }
   }
 
@@ -415,7 +449,7 @@
   }
 
   function initStaticReveal() {
-    observeReveal(document.querySelectorAll("section [data-reveal]:not([data-steps] *):not([data-pricing] *):not([data-testimonials] *):not([data-faq] *):not([data-ueber-uns-stats] *)"));
+    observeReveal(document.querySelectorAll("section [data-reveal]:not([data-steps] *):not([data-pricing] *):not([data-testimonials] *):not([data-faq] *):not([data-ueber-uns-stats] *):not([data-ueber-uns-blocks] *):not([data-ueber-uns-audience] *)"));
   }
 
   function initFooterYear() {
