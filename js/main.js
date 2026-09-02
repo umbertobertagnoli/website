@@ -4,23 +4,27 @@
   var STORAGE_KEY = "wemakeyoufast-lang";
   var currentLang = localStorage.getItem(STORAGE_KEY) || "de";
 
-  // Bildpfade ohne Endung, in der Reihenfolge der Ablauf-Schritte. Der vierte
-  // Schritt (Report) hat kein Foto und bekommt eine dekorative Fläche.
+  // Bilder der Ablauf-Schritte in Reihenfolge. Die Fotos liegen als JPEG vor,
+  // der Report-Screenshot als PNG (flache Farbflächen und Text) — die kleine
+  // Fassung davon als JPEG, weil PNG hier kaum komprimiert. „contain“ zeigt den
+  // Report vollständig statt ihn wie ein Foto zu beschneiden.
   var STEP_IMAGES = [
-    "img/testing/handschlag-karl",
-    "img/testing/ergometer-laptop",
-    "img/testing/blutabnahme-karl",
-    null
+    { base: "img/testing/handschlag-karl", ext: "jpg", width: 1920, height: 1280 },
+    { base: "img/testing/ergometer-laptop", ext: "jpg", width: 1920, height: 1280 },
+    { base: "img/testing/blutabnahme-karl", ext: "jpg", width: 1920, height: 1280 },
+    { base: "img/report/leistungskennwerte", ext: "png", smallExt: "jpg", width: 2480, height: 1768, contain: true }
   ];
 
-  // 1920er Fassung plus 960er für schmale Viewports.
-  function responsiveImg(base, alt, sizes, opts) {
+  // Volle Fassung plus 960er für schmale Viewports.
+  function responsiveImg(img, alt, sizes, opts) {
     opts = opts || {};
+    var full = img.base + "." + img.ext;
+    var small = img.base + "-960." + (img.smallExt || img.ext);
     return (
-      '<img src="' + base + '.jpg"' +
-      ' srcset="' + base + '-960.jpg 960w, ' + base + '.jpg 1920w"' +
+      '<img src="' + full + '"' +
+      ' srcset="' + small + " 960w, " + full + " " + img.width + 'w"' +
       ' sizes="' + sizes + '"' +
-      ' width="1920" height="1280" decoding="async"' +
+      ' width="' + img.width + '" height="' + img.height + '" decoding="async"' +
       (opts.eager ? ' fetchpriority="high"' : ' loading="lazy"') +
       ' alt="' + alt + '">'
     );
@@ -122,9 +126,10 @@
     if (!wrap) return;
     wrap.innerHTML = dict.how.steps
       .map(function (step, i) {
-        var media = STEP_IMAGES[i]
-          ? '<div class="step-media">' +
-            responsiveImg(STEP_IMAGES[i], step.alt, "(max-width: 760px) 100vw, (max-width: 980px) 46vw, 24vw") +
+        var image = STEP_IMAGES[i];
+        var media = image
+          ? '<div class="step-media' + (image.contain ? " step-media-contain" : "") + '">' +
+            responsiveImg(image, step.alt, "(max-width: 760px) 100vw, (max-width: 980px) 46vw, 24vw") +
             "</div>"
           : '<div class="step-media step-media-blank" aria-hidden="true">' + icon("check") + "</div>";
         return (

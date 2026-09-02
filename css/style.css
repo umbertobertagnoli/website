@@ -447,6 +447,11 @@ section {
   object-fit: cover;
 }
 
+/* Der Report ist ein Dokument, kein Foto: ganz zeigen statt zuschneiden. */
+.step-media-contain img {
+  object-fit: contain;
+}
+
 .step-media-blank {
   display: flex;
   align-items: center;
@@ -663,6 +668,15 @@ section {
   flex-shrink: 0;
   margin-top: 3px;
   color: var(--color-accent);
+}
+
+.pricing-trust {
+  margin: 24px auto 0;
+  max-width: 720px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
 }
 
 .pricing-addon {

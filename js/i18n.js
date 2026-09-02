@@ -57,7 +57,8 @@ const translations = {
         },
         {
           title: "Trainingsbereiche-Report",
-          desc: "Du erhältst deinen persönlichen Report mit klar definierten Trainingszonen."
+          desc: "Du erhältst deinen persönlichen Report mit klar definierten Trainingszonen.",
+          alt: "Seite „Leistungskennwerte“ aus dem Report: Tacho-Grafiken zu VO2max, VLamax, anaerober Schwelle, Fatmax, Carbmax, Glykogen und Herzfrequenz mit den zugehörigen Messwerten"
         }
       ]
     },
@@ -82,58 +83,63 @@ const translations = {
     },
     pricing: {
       eyebrow: "Preise",
-      title: "Transparente Preise",
-      subtitle: "Für jede Zielsetzung das passende Paket — ohne versteckte Kosten.",
+      title: "Diagnostik auf Nationalteam-Niveau, ohne Instituts-Preis",
+      subtitle: "Vergleichbare Leistungsdiagnostik mit Atemgasanalyse kostet in Wien üblicherweise zwischen 195 und 320 Euro. Wir arbeiten schlanker: kein Institut, keine Wartezimmer, dafür zwei Leute, die selbst auf internationalem Niveau gerudert sind und über 100 Athlet:innen betreut haben.",
       popularLabel: "Beliebt",
       plans: [
         {
           name: "Laktattest Basic",
-          price: "120 €",
+          price: "99 €",
           period: "einmalig",
-          desc: "Der ideale Einstieg: Stufentest inklusive Laktatmessung und kompakter Auswertung.",
+          desc: "Der ehrliche Einstieg: Du gehst mit klaren Zahlen nach Hause statt mit einer Faustformel aus dem Internet.",
           features: [
             "Stufentest auf Laufband, Rad oder Ergometer",
             "Laktatmessung an jeder Stufe",
-            "Kompakte Trainingsbereichs-Übersicht"
+            "Berechnung deiner individuellen Schwellen",
+            "Deine Ausdauerzone und deine VO2max-Zone",
+            "Ergebnis noch am selben Tag"
           ],
           cta: "Jetzt buchen",
           highlighted: false
         },
         {
           name: "Laktattest Pro",
-          price: "200 €",
+          price: "149 €",
           period: "einmalig",
-          desc: "Für ambitionierte Athlet:innen: die umfassende physiologische Analyse inklusive persönlicher Besprechung.",
+          desc: "Das volle Bild deiner Physiologie. Du siehst nicht nur, wo deine Zonen liegen, sondern warum sie dort liegen und was sich am schnellsten verbessern lässt.",
           features: [
             "Alles aus Basic",
-            "Erweiterte Herzfrequenz- & Leistungsanalyse",
-            "Bestimmung von VO2max, FatMax und VLamax",
-            "Detaillierte Potentialanalyse: wo du aktuell stehst und wie viel noch geht",
-            "Ausführlicher schriftlicher Report",
-            "Persönliches Auswertungsgespräch"
+            "Atemgasanalyse: VO2max, FatMax und VLamax",
+            "Detaillierte Potentialanalyse: wo du stehst und wo am meisten drin ist",
+            "Ausführlicher schriftlicher Report zum Mitnehmen",
+            "Persönliches Auswertungsgespräch, in dem du alles verstehst",
+            "Konkrete Trainingsempfehlungen für die nächsten Wochen"
           ],
           cta: "Jetzt buchen",
           highlighted: true
         },
         {
-          name: "All-Inclusive Paket",
-          price: "500 €",
-          period: "einmalig",
-          desc: "Das Rundum-Paket: Pro-Test plus individueller Trainingsplan zum Start.",
+          name: "All-Inclusive",
+          price: "449 €",
+          period: "3 Monate Bindung",
+          desc: "Testen allein verändert nichts. Hier begleiten wir dich drei Monate durch: messen, planen, nachmessen, nachjustieren.",
           features: [
-            "Alles aus Pro",
-            "Individueller Trainingsplan (Ersterstellung)",
-            "1 Monat Trainingsbetreuung inklusive",
-            "Priorisierte Terminvergabe"
+            "Alles aus dem Pro-Paket",
+            "Stufentest alle 4 Wochen, damit Fortschritt sichtbar wird",
+            "Laufende individuelle Trainingsplanung inklusive",
+            "Laufende Anpassung des Plans an deine Werte",
+            "Direkter Draht zu uns bei Fragen",
+            "Mindestlaufzeit 3 Monate"
           ],
           cta: "Jetzt buchen",
           highlighted: false
         }
       ],
+      trustNote: "Keine versteckten Kosten. Keine Abo-Falle. Wenn wir nach dem Gespräch der Meinung sind, dass dir ein Test aktuell nichts bringt, sagen wir dir das.",
       addon: {
         title: "Laufende Trainingsplanung",
-        price: "99 € / Monat",
-        desc: "Fortlaufende individuelle Trainingsplanerstellung und Betreuung nach deinem Laktattest — monatlich kündbar, ideal in Kombination mit jedem Test."
+        price: "69 € / Monat",
+        desc: "Fortlaufende individuelle Trainingsplanung nach deinem Laktattest. Dein Plan wird laufend an deine Entwicklung angepasst, nicht einmal geschrieben und dann vergessen. Monatlich kündbar."
       }
     },
     testimonials: {
@@ -177,11 +183,11 @@ const translations = {
         },
         {
           q: "Was kostet ein Laktattest?",
-          a: "Es gibt drei Pakete, jeweils einmalig und ohne versteckte Kosten: Laktattest Basic um 120 €, Laktattest Pro um 200 € und das All-Inclusive Paket um 500 €. Welche Leistungen jeweils enthalten sind, siehst du im Abschnitt „Preise“."
+          a: "Der Laktattest Basic kostet 99 €, der Laktattest Pro 149 € — beide einmalig. Das All-Inclusive-Paket kostet 449 € bei drei Monaten Mindestlaufzeit. Welche Leistungen jeweils enthalten sind, siehst du im Abschnitt „Preise“."
         },
         {
           q: "Gibt es auch eine laufende Trainingsbetreuung?",
-          a: "Ja. Nach deinem Laktattest kannst du die laufende Trainingsplanung um 99 € pro Monat dazubuchen: individuelle Trainingsplanerstellung und Betreuung, monatlich kündbar."
+          a: "Ja. Nach deinem Laktattest kannst du die laufende Trainingsplanung um 69 € pro Monat dazubuchen: individuelle Trainingsplanung, laufend an deine Entwicklung angepasst, monatlich kündbar."
         },
         {
           q: "Wo findet der Test statt?",
@@ -325,7 +331,8 @@ const translations = {
         },
         {
           title: "Training Zones Report",
-          desc: "You receive a personal report with clearly defined training zones."
+          desc: "You receive a personal report with clearly defined training zones.",
+          alt: "“Performance metrics” page from the report: gauge charts for VO2max, VLamax, anaerobic threshold, Fatmax, Carbmax, glycogen and heart rate alongside the measured values"
         }
       ]
     },
@@ -350,58 +357,63 @@ const translations = {
     },
     pricing: {
       eyebrow: "Pricing",
-      title: "Transparent Pricing",
-      subtitle: "The right package for every goal — no hidden costs.",
+      title: "National-team-level diagnostics without the institute price tag",
+      subtitle: "Comparable performance diagnostics with respiratory gas analysis typically costs between 195 and 320 euros in Vienna. We work leaner: no institute, no waiting rooms, just two people who have rowed at international level themselves and coached over 100 athletes.",
       popularLabel: "Popular",
       plans: [
         {
           name: "Lactate Test Basic",
-          price: "€120",
+          price: "€99",
           period: "one-time",
-          desc: "A great starting point: a step test with lactate measurement and a compact summary.",
+          desc: "The honest starting point: you go home with clear numbers instead of a rule of thumb from the internet.",
           features: [
-            "Step test on treadmill, bike, or ergometer",
+            "Step test on treadmill, bike or ergometer",
             "Lactate measurement at every stage",
-            "Compact training zones overview"
+            "Calculation of your individual thresholds",
+            "Your endurance zone and your VO2max zone",
+            "Results on the same day"
           ],
           cta: "Book now",
           highlighted: false
         },
         {
           name: "Lactate Test Pro",
-          price: "€200",
+          price: "€149",
           period: "one-time",
-          desc: "For ambitious athletes: a comprehensive physiological analysis including a personal consultation.",
+          desc: "The full picture of your physiology. You see not just where your zones are, but why they're there and what will improve fastest.",
           features: [
             "Everything from Basic",
-            "Advanced heart rate & performance analysis",
-            "VO2max, FatMax and VLamax determination",
-            "Detailed potential analysis: where you stand and how much room for improvement you have",
-            "Detailed written report",
-            "Personal results consultation"
+            "Respiratory gas analysis: VO2max, FatMax and VLamax",
+            "Detailed potential analysis: where you stand and where the biggest gains are",
+            "Detailed written report to take home",
+            "Personal results consultation where everything gets explained",
+            "Concrete training recommendations for the coming weeks"
           ],
           cta: "Book now",
           highlighted: true
         },
         {
-          name: "All-Inclusive Package",
-          price: "€500",
-          period: "one-time",
-          desc: "The complete package: the Pro test plus a personalised training plan to get you started.",
+          name: "All-Inclusive",
+          price: "€449",
+          period: "3-month commitment",
+          desc: "Testing alone changes nothing. Here we're with you for three months: measure, plan, re-measure, adjust.",
           features: [
-            "Everything in Pro",
-            "Custom training plan (initial setup)",
-            "1 month of training plan support included",
-            "Priority booking"
+            "Everything from the Pro package",
+            "Step test every 4 weeks so progress becomes visible",
+            "Ongoing individual training planning included",
+            "Continuous plan adjustment based on your data",
+            "Direct line to us whenever questions come up",
+            "Minimum term of 3 months"
           ],
           cta: "Book now",
           highlighted: false
         }
       ],
+      trustNote: "No hidden costs. No subscription traps. If we think a test won't help you right now, we'll tell you.",
       addon: {
         title: "Ongoing Training Plan",
-        price: "€99 / month",
-        desc: "Continuous, personalised training plan creation and support after your lactate test — cancel anytime, ideal alongside any test."
+        price: "€69 / month",
+        desc: "Ongoing individual training planning after your lactate test. Your plan is continuously adapted to your development, not written once and forgotten. Cancel monthly."
       }
     },
     testimonials: {
@@ -445,11 +457,11 @@ const translations = {
         },
         {
           q: "What does a lactate test cost?",
-          a: "There are three packages, each a one-time fee with no hidden costs: Lactate Test Basic at €120, Lactate Test Pro at €200, and the All-Inclusive Package at €500. You can see what each one includes in the “Pricing” section."
+          a: "Lactate Test Basic is €99 and Lactate Test Pro is €149 — both one-time. The All-Inclusive package is €449 with a three-month minimum term. You can see what each one includes in the “Pricing” section."
         },
         {
           q: "Do you also offer ongoing training support?",
-          a: "Yes. After your lactate test you can add ongoing training planning for €99 per month: personalised training plans and guidance, cancellable monthly."
+          a: "Yes. After your lactate test you can add ongoing training planning for €69 per month: individual training planning, continuously adapted to your development, cancellable monthly."
         },
         {
           q: "Where does the test take place?",
