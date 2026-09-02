@@ -83,8 +83,8 @@ const translations = {
     },
     pricing: {
       eyebrow: "Preise",
-      title: "Diagnostik auf Nationalteam-Niveau, ohne Instituts-Preis",
-      subtitle: "Vergleichbare Leistungsdiagnostik mit Atemgasanalyse kostet in Wien üblicherweise zwischen 195 und 320 Euro. Wir arbeiten schlanker: kein Institut, keine Wartezimmer, dafür zwei Leute, die selbst auf internationalem Niveau gerudert sind und über 100 Athlet:innen betreut haben.",
+      title: "Preise",
+      subtitle: "Vom einmaligen Stufentest bis zur durchgehenden Betreuung. Alle Preise inklusive Auswertung und persönlichem Gespräch.",
       popularLabel: "Beliebt",
       plans: [
         {
@@ -139,7 +139,7 @@ const translations = {
       addon: {
         title: "Laufende Trainingsplanung",
         price: "69 € / Monat",
-        desc: "Fortlaufende individuelle Trainingsplanung nach deinem Laktattest. Dein Plan wird laufend an deine Entwicklung angepasst, nicht einmal geschrieben und dann vergessen. Monatlich kündbar."
+        desc: "Fortlaufende individuelle Trainingsplanung nach deinem Laktattest. Dein Plan wird laufend an deine Entwicklung angepasst. Monatlich kündbar."
       }
     },
     testimonials: {
@@ -357,8 +357,8 @@ const translations = {
     },
     pricing: {
       eyebrow: "Pricing",
-      title: "National-team-level diagnostics without the institute price tag",
-      subtitle: "Comparable performance diagnostics with respiratory gas analysis typically costs between 195 and 320 euros in Vienna. We work leaner: no institute, no waiting rooms, just two people who have rowed at international level themselves and coached over 100 athletes.",
+      title: "Pricing",
+      subtitle: "From a one-off step test to continuous support. All prices include the analysis and a personal consultation.",
       popularLabel: "Popular",
       plans: [
         {
@@ -413,7 +413,7 @@ const translations = {
       addon: {
         title: "Ongoing Training Plan",
         price: "€69 / month",
-        desc: "Ongoing individual training planning after your lactate test. Your plan is continuously adapted to your development, not written once and forgotten. Cancel monthly."
+        desc: "Ongoing individual training planning after your lactate test. Your plan is continuously adapted to your development. Cancel monthly."
       }
     },
     testimonials: {
