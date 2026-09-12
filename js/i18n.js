@@ -103,7 +103,7 @@ const translations = {
           "Für alle, die nach längerer Pause wieder mit Sport anfangen und dabei von Anfang an das Richtige tun wollen."
         ]
       },
-      imageAlt: "Athletin im blauen Nationaltrikot beim Lauftraining, im Hintergrund die Wiener Skyline"
+      imageAlt: "Andreas und Umberto stehen konzentriert vor einem Laptop und besprechen Testergebnisse"
     },
     pricing: {
       eyebrow: "Preise",
@@ -216,7 +216,7 @@ const translations = {
         },
         {
           q: "Wo findet der Test statt?",
-          a: "In der Florian-Berndl-Gasse 16, 1220 Wien. Den Termin vereinbaren wir vorab über das Kontaktformular."
+          a: "In Wien, der genaue Ort nach Vereinbarung. Ort und Termin besprechen wir vorab über das Kontaktformular."
         },
         {
           q: "Wie schnell bekomme ich eine Rückmeldung auf meine Anfrage?",
@@ -240,7 +240,7 @@ const translations = {
       },
       info: {
         addressLabel: "Standort",
-        address: "Florian-Berndl-Gasse 16, 1220 Wien",
+        address: "Nach Vereinbarung",
         emailLabel: "E-Mail",
         phoneLabel: "Telefon",
         people: [
@@ -249,8 +249,8 @@ const translations = {
         ]
       },
       map: {
-        title: "Florian-Berndl-Gasse 16, 1220 Wien",
-        note: "Testtermine nach Vereinbarung"
+        title: "Wien",
+        note: "Testort und Termin nach Vereinbarung"
       }
     },
     footer: {
@@ -402,7 +402,7 @@ const translations = {
           "Anyone returning to sport after a longer break who wants to do it right from the start."
         ]
       },
-      imageAlt: "Athlete in a blue national team kit running, with the Vienna skyline in the background"
+      imageAlt: "Andreas and Umberto standing over a laptop, focused on reviewing test results"
     },
     pricing: {
       eyebrow: "Pricing",
@@ -515,7 +515,7 @@ const translations = {
         },
         {
           q: "Where does the test take place?",
-          a: "At Florian-Berndl-Gasse 16, 1220 Vienna. We arrange the appointment in advance via the contact form."
+          a: "In Vienna, at a location arranged with you. We settle both location and appointment in advance via the contact form."
         },
         {
           q: "How quickly will you reply to my enquiry?",
@@ -539,7 +539,7 @@ const translations = {
       },
       info: {
         addressLabel: "Location",
-        address: "Florian-Berndl-Gasse 16, 1220 Vienna",
+        address: "By arrangement",
         emailLabel: "Email",
         phoneLabel: "Phone",
         people: [
@@ -548,8 +548,8 @@ const translations = {
         ]
       },
       map: {
-        title: "Florian-Berndl-Gasse 16, 1220 Vienna",
-        note: "Test appointments by arrangement"
+        title: "Vienna",
+        note: "Test location and appointment by arrangement"
       }
     },
     footer: {
