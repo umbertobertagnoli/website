@@ -258,45 +258,9 @@ const translations = {
       linksTitle: "Rechtliches",
       impressum: "Impressum",
       datenschutz: "Datenschutz",
+      agb: "AGB",
       socialTitle: "Folge uns",
       rights: "Alle Rechte vorbehalten."
-    },
-    legal: {
-      backToHome: "Zurück zur Startseite",
-      placeholderNote: "Platzhaltertext — bitte vor Veröffentlichung durch die tatsächlichen Unternehmens- und Rechtsdaten ersetzen.",
-      impressum: {
-        title: "Impressum",
-        updated: "Stand: Juli 2026",
-        mediaOwnerTitle: "Medieninhaber & Herausgeber",
-        mediaOwner: "WeMakeYouFast\nFlorian-Berndl-Gasse 16, 1220 Wien, Österreich",
-        contactTitle: "Kontakt",
-        contactEmailLabel: "E-Mail",
-        contactPhoneLabel: "Telefon",
-        regTitle: "Unternehmensangaben",
-        regItems: [
-          "Unternehmensgegenstand: Sportwissenschaftliche Leistungsdiagnostik & Trainingsberatung",
-          "Firmenbuchnummer: FN XXXXXXx (Platzhalter)",
-          "UID-Nummer: ATUXXXXXXXX (Platzhalter)",
-          "Gewerbebehörde: Magistrat der Stadt Wien"
-        ],
-        disputeTitle: "Online-Streitbeilegung",
-        disputeText: "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: ec.europa.eu/consumers/odr. Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle nicht verpflichtet."
-      },
-      datenschutz: {
-        title: "Datenschutzerklärung",
-        updated: "Stand: Juli 2026",
-        introTitle: "Allgemeine Hinweise",
-        introText: "Der Schutz deiner personenbezogenen Daten ist uns wichtig. Diese Datenschutzerklärung informiert dich darüber, welche Daten wir erheben, wenn du unsere Website besuchst oder das Kontaktformular nutzt, und wie wir damit umgehen.",
-        controllerTitle: "Verantwortlicher",
-        controllerAddress: "WeMakeYouFast, Florian-Berndl-Gasse 16, 1220 Wien, Österreich",
-        controllerEmail: "umberto@wemakeyoufast.com",
-        formTitle: "Kontaktformular",
-        formText: "Wenn du uns über das Kontaktformular kontaktierst, speichern wir die von dir angegebenen Daten (Name, E-Mail-Adresse, Nachricht) ausschließlich zur Bearbeitung deiner Anfrage und für den Fall von Anschlussfragen.",
-        cookiesTitle: "Cookies & Hosting",
-        cookiesText: "Diese Website verwendet keine Tracking-Cookies. Beim Hosting-Anbieter können technisch notwendige Server-Logdaten anfallen.",
-        rightsTitle: "Deine Rechte",
-        rightsText: "Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner Daten sowie das Recht auf Datenübertragbarkeit. Wende dich dazu an die oben genannte Kontaktadresse."
-      }
     }
   },
 
@@ -557,45 +521,227 @@ const translations = {
       linksTitle: "Legal",
       impressum: "Impressum",
       datenschutz: "Privacy Policy",
+      agb: "Terms",
       socialTitle: "Follow us",
       rights: "All rights reserved."
-    },
-    legal: {
-      backToHome: "Back to homepage",
-      placeholderNote: "Placeholder text — please replace with your actual company and legal details before publishing.",
-      impressum: {
-        title: "Impressum",
-        updated: "Last updated: July 2026",
-        mediaOwnerTitle: "Media Owner & Publisher",
-        mediaOwner: "WeMakeYouFast\nFlorian-Berndl-Gasse 16, 1220 Vienna, Austria",
-        contactTitle: "Contact",
-        contactEmailLabel: "Email",
-        contactPhoneLabel: "Phone",
-        regTitle: "Company Details",
-        regItems: [
-          "Business purpose: Sports science performance diagnostics & training consulting",
-          "Commercial register number: FN XXXXXXx (placeholder)",
-          "VAT ID: ATUXXXXXXXX (placeholder)",
-          "Trade authority: Vienna City Administration"
-        ],
-        disputeTitle: "Online Dispute Resolution",
-        disputeText: "The European Commission provides a platform for online dispute resolution (ODR): ec.europa.eu/consumers/odr. We are not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board."
-      },
-      datenschutz: {
-        title: "Privacy Policy",
-        updated: "Last updated: July 2026",
-        introTitle: "General Information",
-        introText: "Protecting your personal data matters to us. This privacy policy explains what data we collect when you visit our website or use the contact form, and how we handle it.",
-        controllerTitle: "Data Controller",
-        controllerAddress: "WeMakeYouFast, Florian-Berndl-Gasse 16, 1220 Vienna, Austria",
-        controllerEmail: "umberto@wemakeyoufast.com",
-        formTitle: "Contact Form",
-        formText: "If you contact us via the contact form, we store the data you provide (name, email address, message) solely to process your request and for any follow-up questions.",
-        cookiesTitle: "Cookies & Hosting",
-        cookiesText: "This website does not use tracking cookies. Our hosting provider may collect technically necessary server log data.",
-        rightsTitle: "Your Rights",
-        rightsText: "You have the right to access, rectify, erase, and restrict the processing of your data at any time, as well as the right to data portability. Please contact us at the address above."
-      }
     }
   }
+};
+
+/* -------------------------------------------------------------------------
+   Rechtstexte — Impressum, Datenschutzerklärung, AGB (Stand: September 2026)
+
+   Die Texte stehen bewusst nur auf Deutsch; im EN-Modus wird darauf
+   hingewiesen. Aufbau als Blockliste, damit neue Abschnitte ohne Änderung
+   am Rendering ergänzt werden können:
+     { h: "Überschrift" }
+     { p: "Absatz (einfaches Inline-HTML erlaubt)" }
+     { ul: ["Punkt", ...] }
+     { table: { head: [...], rows: [[...], ...] } }
+   ------------------------------------------------------------------------- */
+
+const MAIL_UMBERTO = '<a href="mailto:umberto@wemakeyoufast.com">umberto@wemakeyoufast.com</a>';
+const MAIL_ANDREAS = '<a href="mailto:andreas@wemakeyoufast.com">andreas@wemakeyoufast.com</a>';
+const MAIL_INFO = '<a href="mailto:info@wemakeyoufast.com">info@wemakeyoufast.com</a>';
+const TEL_UMBERTO = '<a href="tel:+43676850755600">+43 676 850755600</a>';
+const TEL_ANDREAS = '<a href="tel:+43676850755855">+43 676 850755855</a>';
+
+const legalDocs = {
+
+  impressum: {
+    title: "Impressum und Offenlegung",
+    updated: "Stand: September 2026",
+    intro: "Angaben gemäß § 5 E-Commerce-Gesetz (ECG) sowie §§ 24 und 25 Mediengesetz (MedienG)",
+    blocks: [
+      { h: "Medieninhaber und Betreiber dieser Website" },
+      { p: "Diese Website wird gemeinsam betrieben von:" },
+      { p: "<strong>Umberto Bertagnoli</strong><br>Einzelunternehmer<br>Kratochwjlestraße 12/2/30, 1220 Wien, Österreich<br>" + MAIL_UMBERTO + "<br>" + TEL_UMBERTO },
+      { p: "<strong>Andreas Bertagnoli</strong><br>Einzelunternehmer<br>Kratzmangasse 8, 1220 Wien, Österreich<br>" + MAIL_ANDREAS + "<br>" + TEL_ANDREAS },
+      { p: "„WeMakeYouFast“ ist die gemeinsame Bezeichnung dieser Website. Es handelt sich dabei um keine Gesellschaft und um kein gemeinsames Unternehmen." },
+
+      { h: "Wichtiger Hinweis zur Vertragsbeziehung" },
+      { p: "Umberto Bertagnoli und Andreas Bertagnoli sind rechtlich und wirtschaftlich voneinander unabhängig tätig. Verträge über Beratungs- und Diagnostikleistungen kommen jeweils ausschließlich mit derjenigen Person zustande, die Sie beauftragen. Diese Person rechnet die Leistung eigenständig ab und ist allein für deren Erbringung verantwortlich. Eine gemeinsame Haftung besteht nicht." },
+      { p: "Allgemeine Kontaktadresse: " + MAIL_INFO },
+
+      { h: "Unternehmensgegenstand" },
+      { p: "Sportwissenschaftliche Trainingsberatung, Leistungsdiagnostik und Erstellung individueller Trainingspläne für Ausdauersportlerinnen und Ausdauersportler." },
+
+      { h: "Gewerberechtliche Angaben" },
+      { p: "Gewerbebehörde: Magistratisches Bezirksamt für den 22. Bezirk, Wien" },
+      { p: "Anwendbare Rechtsvorschrift: Gewerbeordnung 1994 (GewO), abrufbar unter <a href=\"https://www.ris.bka.gv.at\" target=\"_blank\" rel=\"noopener\">www.ris.bka.gv.at</a>" },
+
+      { h: "Grundlegende Richtung (Blattlinie)" },
+      { p: "Diese Website informiert über das Leistungsangebot von Umberto Bertagnoli und Andreas Bertagnoli in den Bereichen Trainingsberatung, Leistungsdiagnostik und Trainingssteuerung sowie über fachliche Hintergründe zu diesen Themen. Sie dient der Darstellung des jeweils eigenen Angebots und verfolgt keine darüber hinausgehende politische oder weltanschauliche Ausrichtung." },
+
+      { h: "Hinweis zu den angebotenen Leistungen" },
+      { p: "Die angebotenen Leistungen dienen der Trainingssteuerung im Sport. Sie stellen weder eine medizinische Untersuchung noch eine sportmedizinische Tauglichkeitsuntersuchung dar und ersetzen keine ärztliche Beratung, Diagnose oder Behandlung. Bei bestehenden Erkrankungen, Beschwerden oder Risikofaktoren ist vor der Teilnahme eine ärztliche Abklärung erforderlich." },
+
+      { h: "Haftung für Inhalte" },
+      { p: "Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität wird jedoch keine Gewähr übernommen. Die Nutzung der bereitgestellten Informationen erfolgt auf eigene Verantwortung." },
+
+      { h: "Haftung für Links" },
+      { p: "Diese Website enthält gegebenenfalls Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte verlinkter Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Zum Zeitpunkt der Verlinkung waren keine rechtswidrigen Inhalte erkennbar. Bei Bekanntwerden von Rechtsverletzungen werden entsprechende Links umgehend entfernt." },
+
+      { h: "Urheberrecht" },
+      { p: "Die auf dieser Website veröffentlichten Inhalte, Texte, Grafiken und Bilder sind urheberrechtlich geschützt. Jede Verwertung außerhalb der Grenzen des Urheberrechtsgesetzes bedarf der vorherigen schriftlichen Zustimmung." }
+    ]
+  },
+
+  datenschutz: {
+    title: "Datenschutzerklärung",
+    updated: "Stand: September 2026",
+    intro: "Der Schutz Ihrer personenbezogenen Daten ist uns wichtig. Nachfolgend informieren wir Sie gemäß Art. 13 und 14 der Datenschutz-Grundverordnung (DSGVO) darüber, welche Daten verarbeitet werden, zu welchem Zweck und welche Rechte Ihnen zustehen.",
+    blocks: [
+      { h: "1. Verantwortliche" },
+      { p: "Diese Website wird gemeinsam betrieben von:" },
+      { p: "<strong>Umberto Bertagnoli</strong><br>Kratochwjlestraße 12/2/30, 1220 Wien, Österreich<br>" + MAIL_UMBERTO + " · " + TEL_UMBERTO },
+      { p: "<strong>Andreas Bertagnoli</strong><br>Kratzmangasse 8, 1220 Wien, Österreich<br>" + MAIL_ANDREAS + " · " + TEL_ANDREAS },
+      { p: "<strong>Für den Betrieb dieser Website</strong> (Punkte 2, 3 und 6 dieser Erklärung) sind beide gemeinsam Verantwortliche im Sinne des Art. 26 DSGVO." },
+      { p: "<strong>Für die Verarbeitung im Rahmen einer Beratung oder Diagnostik</strong> (Punkt 4) ist ausschließlich diejenige Person Verantwortliche, die Sie beauftragt haben. Ein Austausch dieser Daten zwischen Umberto Bertagnoli und Andreas Bertagnoli findet nicht statt." },
+      { p: "Ein Datenschutzbeauftragter ist nicht bestellt, da die Voraussetzungen des Art. 37 DSGVO nicht vorliegen." },
+
+      { h: "2. Aufruf der Website (Server-Logfiles)" },
+      { p: "Beim Aufruf unserer Website werden durch unseren Hosting-Dienstleister automatisch Daten verarbeitet, die Ihr Browser übermittelt: IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, übertragene Datenmenge, Referrer-URL sowie Browser- und Betriebssystemangaben." },
+      { p: "Zweck: technische Bereitstellung, Stabilität und Sicherheit der Website.<br>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb der Website).<br>Speicherdauer: Diese Daten werden ausschließlich temporär verarbeitet und nicht mit anderen Datenquellen zusammengeführt." },
+
+      { h: "3. Kontaktaufnahme" },
+      { p: "Wenn Sie uns per E-Mail, Telefon oder über ein Kontaktformular kontaktieren, verarbeiten wir die von Ihnen übermittelten Daten (Name, Kontaktdaten, Inhalt der Anfrage), um Ihre Anfrage zu beantworten. Anfragen über die allgemeine Adresse " + MAIL_INFO + " werden an die für Ihr Anliegen zuständige Person weitergeleitet." },
+      { p: "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO bei vorvertraglichen Anfragen, sonst Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).<br>Speicherdauer: bis zur abschließenden Bearbeitung Ihrer Anfrage, darüber hinaus nur, soweit gesetzliche Aufbewahrungspflichten bestehen." },
+
+      { h: "4. Verarbeitung von Gesundheitsdaten im Rahmen von Beratung und Diagnostik" },
+      { p: "Im Rahmen unserer Leistungen werden Daten verarbeitet, die nach Art. 9 DSGVO als besondere Kategorien personenbezogener Daten (Gesundheitsdaten) gelten. Diese Daten werden mit besonderer Sorgfalt behandelt." },
+      { p: "Verantwortliche ist ausschließlich die von Ihnen beauftragte Person." },
+      { p: "<strong>Verarbeitete Daten:</strong> Angaben aus dem Gesundheits- und Anamnesefragebogen, Körpergewicht und Körpermaße, Herzfrequenz, Laktatwerte aus kapillaren Blutproben, Leistungs- und Trainingsdaten, daraus berechnete metabolische Kennwerte sowie Trainingspläne und Verlaufsdokumentation." },
+      { p: "<strong>Zweck:</strong> Durchführung der Beratung und Leistungsdiagnostik, Erstellung individueller Trainingsbereiche und Trainingspläne, laufende Trainingsbetreuung sowie Verlaufskontrolle bei Folgetests." },
+      { p: "<strong>Rechtsgrundlage:</strong> Ihre ausdrückliche Einwilligung nach Art. 9 Abs. 2 lit. a DSGVO in Verbindung mit Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung). Die Einwilligung wird vor der Testdurchführung gesondert und schriftlich eingeholt." },
+      { p: "<strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt davon unberührt. Ein Widerruf kann dazu führen, dass die vereinbarte Betreuung nicht fortgeführt werden kann." },
+      { p: "<strong>Speicherdauer:</strong> Für die Dauer der Betreuung und darüber hinaus, solange dies für die Verlaufsbeurteilung bei Folgetests erforderlich ist, längstens jedoch drei Jahre nach dem letzten Test. Danach werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Auf Wunsch erfolgt die Löschung auch früher." },
+      { p: "<strong>Blutproben:</strong> Kapillare Blutproben werden ausschließlich zur unmittelbaren Laktatbestimmung vor Ort verwendet und nicht aufbewahrt oder weitergegeben." },
+
+      { h: "5. Empfänger und Auftragsverarbeiter" },
+      { p: "Eine Weitergabe an Dritte erfolgt nicht, außer an die nachfolgend genannten Dienstleister, die als Auftragsverarbeiter nach Art. 28 DSGVO tätig sind. Mit allen Dienstleistern bestehen entsprechende Auftragsverarbeitungsverträge." },
+      { table: {
+          head: ["Dienstleister", "Zweck", "Sitz"],
+          rows: [
+            ["Cloudflare, Inc.", "Hosting, Bereitstellung und Absicherung der Website", "USA (EU-Rechenzentren)"],
+            ["helloly (Hosting-Anbieter)", "E-Mail-Postfächer und E-Mail-Versand", "Österreich"],
+            ["Google Ireland Ltd.", "E-Mail-Abruf über Gmail", "Irland / USA"],
+            ["INSCYD GmbH", "Softwaregestützte Auswertung der Diagnostikdaten", "Schweiz"]
+          ]
+        } },
+      { p: "<strong>Übermittlung in Drittländer:</strong> Bei Cloudflare, Inc. und Google kann eine Verarbeitung in den USA erfolgen. Grundlage sind die Standardvertragsklauseln der Europäischen Kommission sowie ergänzende Schutzmaßnahmen der Anbieter. Für die Schweiz besteht ein Angemessenheitsbeschluss der Europäischen Kommission, sodass ein mit der EU vergleichbares Datenschutzniveau gewährleistet ist." },
+
+      { h: "6. Cookies" },
+      { p: "Diese Website setzt ausschließlich technisch notwendige Cookies ein, die für den sicheren Betrieb der Seite erforderlich sind. Eine Einwilligung ist hierfür nach § 165 Abs. 3 TKG 2021 nicht erforderlich. Analyse-, Tracking- oder Marketing-Cookies werden nicht eingesetzt." },
+
+      { h: "7. Ihre Rechte" },
+      { p: "Ihnen stehen folgende Rechte zu:" },
+      { ul: [
+          "<strong>Auskunft</strong> über die zu Ihrer Person verarbeiteten Daten (Art. 15 DSGVO)",
+          "<strong>Berichtigung</strong> unrichtiger Daten (Art. 16 DSGVO)",
+          "<strong>Löschung</strong> Ihrer Daten (Art. 17 DSGVO)",
+          "<strong>Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)",
+          "<strong>Datenübertragbarkeit</strong> in einem gängigen Format (Art. 20 DSGVO)",
+          "<strong>Widerspruch</strong> gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21 DSGVO)",
+          "<strong>Widerruf erteilter Einwilligungen</strong> mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)"
+      ] },
+      { p: "Zur Ausübung genügt eine formlose Nachricht an die jeweils verantwortliche Person oder an " + MAIL_INFO + ". Rechte im Zusammenhang mit dem Betrieb dieser Website können Sie gegenüber jeder der beiden genannten Personen geltend machen." },
+
+      { h: "8. Beschwerderecht" },
+      { p: "Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verstößt, können Sie sich bei der Aufsichtsbehörde beschweren:" },
+      { p: "<strong>Österreichische Datenschutzbehörde</strong><br>Barichgasse 40–42, 1030 Wien<br>Telefon: <a href=\"tel:+4315215220\">+43 1 52 152-0</a><br>E-Mail: <a href=\"mailto:dsb@dsb.gv.at\">dsb@dsb.gv.at</a><br><a href=\"https://www.dsb.gv.at\" target=\"_blank\" rel=\"noopener\">www.dsb.gv.at</a>" },
+
+      { h: "9. Änderungen dieser Datenschutzerklärung" },
+      { p: "Diese Datenschutzerklärung wird angepasst, wenn sich Leistungen, eingesetzte Dienstleister oder die Rechtslage ändern. Es gilt jeweils die auf dieser Seite veröffentlichte Fassung." }
+    ]
+  },
+
+  agb: {
+    title: "Allgemeine Geschäftsbedingungen (AGB)",
+    updated: "Stand: September 2026",
+    intro: "",
+    blocks: [
+      { h: "1. Geltungsbereich und Vertragspartner" },
+      { p: "Diese AGB gelten für Beratungs- und Diagnostikleistungen, die über die Website wemakeyoufast.com angeboten werden." },
+      { p: "Die Leistungen werden von zwei rechtlich und wirtschaftlich voneinander unabhängigen Einzelunternehmern erbracht:" },
+      { ul: [
+          "<strong>Umberto Bertagnoli</strong>, Kratochwjlestraße 12/2/30, 1220 Wien",
+          "<strong>Andreas Bertagnoli</strong>, Kratzmangasse 8, 1220 Wien"
+      ] },
+      { p: "„WeMakeYouFast“ ist ausschließlich die Bezeichnung der gemeinsam betriebenen Website und keine Gesellschaft." },
+      { p: "<strong>Der Vertrag kommt jeweils ausschließlich mit derjenigen Person zustande, die Sie beauftragen</strong> (im Folgenden „Anbieter“). Diese Person erbringt die Leistung, rechnet sie eigenständig ab und haftet allein dafür. Die jeweils andere Person ist nicht Vertragspartner und haftet nicht für die Leistungen der anderen. Wer Ihr Vertragspartner ist, wird Ihnen spätestens mit der Terminbestätigung mitgeteilt." },
+      { p: "Abweichende Bedingungen gelten nur bei ausdrücklicher schriftlicher Zustimmung des Anbieters. Diese AGB werden Ihnen vor Vertragsabschluss zur Verfügung gestellt." },
+
+      { h: "2. Leistungen" },
+      { p: "Angeboten werden sportwissenschaftliche Trainingsberatung, Leistungsdiagnostik und die Erstellung individueller Trainingspläne. Der konkrete Leistungsumfang ergibt sich aus der jeweiligen Angebots- oder Paketbeschreibung." },
+      { p: "<strong>Ausdrücklicher Hinweis:</strong> Die Leistungen dienen ausschließlich der Trainingssteuerung im Sport. Sie stellen keine medizinische Untersuchung, keine Diagnose und keine sportmedizinische Tauglichkeitsuntersuchung dar und ersetzen keine ärztliche Beratung oder Behandlung." },
+
+      { h: "3. Zustandekommen des Vertrags" },
+      { p: "Die Darstellung der Leistungen auf der Website stellt kein bindendes Angebot dar. Der Vertrag kommt mit der Bestätigung Ihrer Buchungsanfrage oder mit der Terminvereinbarung durch den Anbieter zustande." },
+
+      { h: "4. Voraussetzungen für die Teilnahme, Mitwirkung" },
+      { p: "Die Leistungsdiagnostik erfolgt unter körperlicher Ausbelastung. Voraussetzung für die Teilnahme ist, dass Sie gesund und uneingeschränkt sportlich belastbar sind." },
+      { p: "Sie verpflichten sich:" },
+      { ul: [
+          "den Gesundheits- und Anamnesefragebogen vor dem Test vollständig und wahrheitsgemäß auszufüllen",
+          "über bestehende Erkrankungen, Beschwerden, Medikamente, Verletzungen und bekannte Risikofaktoren zu informieren",
+          "bei bestehenden Erkrankungen oder Risikofaktoren vorab eine ärztliche Freigabe einzuholen",
+          "den Test bei Beschwerden während der Belastung unverzüglich abzubrechen und dies mitzuteilen"
+      ] },
+      { p: "Bei unvollständigen oder unrichtigen Angaben zum Gesundheitszustand ist der Anbieter berechtigt, den Test abzubrechen oder nicht durchzuführen. Eine Teilnahme kann abgelehnt werden, wenn Zweifel an der Belastbarkeit bestehen." },
+
+      { h: "5. Termine, Absage und Nichterscheinen" },
+      { p: "Termine werden individuell vereinbart. Eine kostenlose Absage oder Verschiebung ist bis <strong>48 Stunden</strong> vor dem vereinbarten Termin möglich." },
+      { p: "Bei späterer Absage oder Nichterscheinen werden 50 % des vereinbarten Entgelts als Ausfallsentschädigung verrechnet. Es steht Ihnen frei nachzuweisen, dass kein oder ein geringerer Schaden entstanden ist." },
+      { p: "Kann der Anbieter einen Termin aus von ihm zu vertretenden Gründen nicht einhalten, wird ein Ersatztermin angeboten. Bereits geleistete Zahlungen werden erstattet, wenn kein Ersatztermin zustande kommt." },
+
+      { h: "6. Preise und Zahlung" },
+      { p: "Es gelten die zum Zeitpunkt der Buchung vereinbarten Preise. Alle Preise verstehen sich in Euro und als Endpreise." },
+      { p: "Die Zahlung ist nach Erbringung der Leistung fällig, sofern nichts anderes vereinbart wurde. Bei Paketen mit laufender Betreuung kann eine Vorauszahlung vereinbart werden. Die Rechnungslegung erfolgt durch den jeweiligen Anbieter." },
+
+      { h: "7. Gutscheine" },
+      { p: "Gutscheine sind übertragbar und können von der darin genannten oder einer anderen Person eingelöst werden, sofern nichts anderes vermerkt ist." },
+      { p: "Die Einlösung erfolgt nach Terminvereinbarung bei demjenigen Anbieter, der den Gutschein ausgestellt hat. Gutscheine sind drei Jahre ab Ausstellungsdatum gültig. Eine Barablöse ist ausgeschlossen. Der Gutschein berechtigt zum Bezug der darin genannten Leistung; Preisänderungen nach Ausstellung gehen nicht zu Ihren Lasten." },
+
+      { h: "8. Rücktrittsrecht bei Fernabsatz (Verbraucher)" },
+      { p: "Haben Sie den Vertrag als Verbraucherin oder Verbraucher ausschließlich über Fernkommunikationsmittel geschlossen (etwa über die Website, per E-Mail oder telefonisch), steht Ihnen nach dem Fern- und Auswärtsgeschäfte-Gesetz (FAGG) ein Rücktrittsrecht von <strong>14 Tagen</strong> ohne Angabe von Gründen zu. Die Frist beginnt mit dem Tag des Vertragsabschlusses." },
+      { p: "Zur Ausübung genügt eine eindeutige Erklärung per E-Mail an den Anbieter. Bereits geleistete Zahlungen werden unverzüglich, spätestens binnen 14 Tagen, erstattet." },
+      { p: "<strong>Vorzeitiger Beginn:</strong> Wünschen Sie, dass mit der Leistung bereits vor Ablauf der Rücktrittsfrist begonnen wird, ist dafür Ihre ausdrückliche Zustimmung erforderlich. In diesem Fall haben Sie bei einem Rücktritt den bis dahin erbrachten anteiligen Leistungswert zu ersetzen. Nach vollständiger Erbringung der Leistung erlischt das Rücktrittsrecht." },
+
+      { h: "9. Ergebnisse und Trainingspläne" },
+      { p: "Diagnostikergebnisse und Trainingspläne werden nach dem aktuellen Stand der Sportwissenschaft individuell erstellt. Ein bestimmter Trainings- oder Wettkampferfolg kann nicht zugesagt werden, da dieser von zahlreichen Faktoren außerhalb des Einflussbereichs des Anbieters abhängt — insbesondere von Ihrer Umsetzung, Regeneration, Ernährung und Gesundheit." },
+      { p: "Die Umsetzung der Trainingsempfehlungen erfolgt eigenverantwortlich und auf eigenes Risiko." },
+      { p: "Erstellte Auswertungen und Trainingspläne sind für Ihren persönlichen Gebrauch bestimmt. Eine Weitergabe an Dritte oder eine gewerbliche Verwertung bedarf der Zustimmung des Anbieters." },
+
+      { h: "10. Haftung" },
+      { p: "Der Anbieter haftet für Schäden, die er vorsätzlich oder grob fahrlässig verursacht hat, unbeschränkt. Für leichte Fahrlässigkeit wird nur bei Verletzung wesentlicher Vertragspflichten und begrenzt auf den vertragstypischen, vorhersehbaren Schaden gehaftet." },
+      { p: "Die Haftung für Personenschäden bleibt in jedem Fall unberührt und wird durch diese Bestimmungen nicht eingeschränkt." },
+      { p: "Keine Haftung besteht für Schäden, die darauf beruhen, dass Sie unvollständige oder unrichtige Angaben zu Ihrem Gesundheitszustand gemacht, eine erforderliche ärztliche Abklärung unterlassen oder Trainingsempfehlungen abweichend umgesetzt haben." },
+      { p: "Eine Haftung des jeweils anderen Anbieters für Leistungen, die nicht von ihm erbracht wurden, ist ausgeschlossen." },
+
+      { h: "11. Datenschutz" },
+      { p: "Die Verarbeitung Ihrer personenbezogenen Daten — insbesondere der im Rahmen der Diagnostik erhobenen Gesundheitsdaten — richtet sich nach der <a href=\"datenschutz.html\">Datenschutzerklärung</a>. Verantwortlich dafür ist ausschließlich der von Ihnen beauftragte Anbieter. Für die Verarbeitung von Gesundheitsdaten wird vor dem Test eine gesonderte ausdrückliche Einwilligung eingeholt." },
+
+      { h: "12. Schlussbestimmungen" },
+      { p: "Es gilt österreichisches Recht unter Ausschluss der Verweisungsnormen des internationalen Privatrechts. Zwingende Verbraucherschutzbestimmungen des Staates, in dem Sie Ihren gewöhnlichen Aufenthalt haben, bleiben unberührt." },
+      { p: "Gerichtsstand ist das sachlich zuständige Gericht am Sitz des jeweiligen Anbieters. Für Verbraucherinnen und Verbraucher gelten die gesetzlichen Gerichtsstände." },
+      { p: "Sollte eine Bestimmung dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt." }
+    ]
+  }
+};
+
+translations.de.legal = {
+  backToHome: "Zurück zur Startseite",
+  langNote: "",
+  impressum: legalDocs.impressum,
+  datenschutz: legalDocs.datenschutz,
+  agb: legalDocs.agb
+};
+
+translations.en.legal = {
+  backToHome: "Back to homepage",
+  langNote: "Our legal notices are available in German only.",
+  impressum: legalDocs.impressum,
+  datenschutz: legalDocs.datenschutz,
+  agb: legalDocs.agb
 };

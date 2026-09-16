@@ -281,46 +281,46 @@
     }
   }
 
-  function renderLegal(dict) {
-    var impressum = document.querySelector("[data-legal-impressum]");
-    if (impressum) {
-      var l = dict.legal.impressum;
-      impressum.innerHTML =
-        '<h1>' + l.title + "</h1>" +
-        '<p class="updated">' + l.updated + "</p>" +
-        '<div class="legal-note">' + dict.legal.placeholderNote + "</div>" +
-        "<h2>" + l.mediaOwnerTitle + "</h2>" +
-        "<p>" + l.mediaOwner.replace(/\n/g, "<br>") + "</p>" +
-        "<h2>" + l.contactTitle + "</h2>" +
-        dict.contact.info.people.map(function (p) {
-          return "<p><strong>" + p.name + "</strong><br>" +
-            l.contactEmailLabel + ": " + mailLink(p.email) + "<br>" +
-            l.contactPhoneLabel + ": " + telLink(p.phone) + "</p>";
-        }).join("") +
-        "<h2>" + l.regTitle + "</h2>" +
-        "<ul>" + l.regItems.map(function (i) { return "<li>" + i + "</li>"; }).join("") + "</ul>" +
-        "<h2>" + l.disputeTitle + "</h2>" +
-        "<p>" + l.disputeText + "</p>";
-    }
+  // Rechtstexte kommen als Blockliste aus i18n.js, damit neue Abschnitte
+  // ohne Anpassung hier ergaenzt werden koennen.
+  function legalBlocks(blocks) {
+    return blocks.map(function (b) {
+      if (b.h) return "<h2>" + b.h + "</h2>";
+      if (b.p) return "<p>" + b.p + "</p>";
+      if (b.ul) return "<ul>" + b.ul.map(function (i) { return "<li>" + i + "</li>"; }).join("") + "</ul>";
+      if (b.table) {
+        return '<div class="legal-table-wrap"><table class="legal-table"><thead><tr>' +
+          b.table.head.map(function (h) { return "<th>" + h + "</th>"; }).join("") +
+          "</tr></thead><tbody>" +
+          b.table.rows.map(function (r) {
+            return "<tr>" + r.map(function (c) { return "<td>" + c + "</td>"; }).join("") + "</tr>";
+          }).join("") +
+          "</tbody></table></div>";
+      }
+      return "";
+    }).join("");
+  }
 
-    var datenschutz = document.querySelector("[data-legal-datenschutz]");
-    if (datenschutz) {
-      var d = dict.legal.datenschutz;
-      datenschutz.innerHTML =
-        '<h1>' + d.title + "</h1>" +
-        '<p class="updated">' + d.updated + "</p>" +
-        '<div class="legal-note">' + dict.legal.placeholderNote + "</div>" +
-        "<h2>" + d.introTitle + "</h2>" +
-        "<p>" + d.introText + "</p>" +
-        "<h2>" + d.controllerTitle + "</h2>" +
-        "<p>" + d.controllerAddress + " — " + mailLink(d.controllerEmail) + "</p>" +
-        "<h2>" + d.formTitle + "</h2>" +
-        "<p>" + d.formText + "</p>" +
-        "<h2>" + d.cookiesTitle + "</h2>" +
-        "<p>" + d.cookiesText + "</p>" +
-        "<h2>" + d.rightsTitle + "</h2>" +
-        "<p>" + d.rightsText + "</p>";
-    }
+  function renderLegalDoc(doc, note) {
+    var html = "<h1>" + doc.title + "</h1>" + '<p class="updated">' + doc.updated + "</p>";
+    if (note) html += '<div class="legal-note">' + note + "</div>";
+    if (doc.intro) html += '<p class="legal-intro">' + doc.intro + "</p>";
+    return html + legalBlocks(doc.blocks);
+  }
+
+  function renderLegal(dict) {
+    var pages = {
+      impressum: "[data-legal-impressum]",
+      datenschutz: "[data-legal-datenschutz]",
+      agb: "[data-legal-agb]"
+    };
+
+    Object.keys(pages).forEach(function (key) {
+      var host = document.querySelector(pages[key]);
+      if (host && dict.legal[key]) {
+        host.innerHTML = renderLegalDoc(dict.legal[key], dict.legal.langNote);
+      }
+    });
 
     document.querySelectorAll("[data-legal-back]").forEach(function (el) {
       el.textContent = dict.legal.backToHome;
