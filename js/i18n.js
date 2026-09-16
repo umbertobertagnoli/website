@@ -616,6 +616,7 @@ const legalDocs = {
       { p: "<strong>Rechtsgrundlage:</strong> Ihre ausdrückliche Einwilligung nach Art. 9 Abs. 2 lit. a DSGVO in Verbindung mit Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung). Die Einwilligung wird vor der Testdurchführung gesondert und schriftlich eingeholt." },
       { p: "<strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt davon unberührt. Ein Widerruf kann dazu führen, dass die vereinbarte Betreuung nicht fortgeführt werden kann." },
       { p: "<strong>Speicherdauer:</strong> Für die Dauer der Betreuung und darüber hinaus, solange dies für die Verlaufsbeurteilung bei Folgetests erforderlich ist, längstens jedoch drei Jahre nach dem letzten Test. Danach werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Auf Wunsch erfolgt die Löschung auch früher." },
+      { p: "<strong>Auswertung:</strong> Für die softwaregestützte Auswertung werden die Messwerte ohne Ihren Namen an den Auswertungsanbieter übermittelt; die Zuordnung zu Ihrer Person verbleibt beim Anbieter." },
       { p: "<strong>Blutproben:</strong> Kapillare Blutproben werden ausschließlich zur unmittelbaren Laktatbestimmung vor Ort verwendet und nicht aufbewahrt oder weitergegeben." },
 
       { h: "5. Empfänger und Auftragsverarbeiter" },
@@ -626,7 +627,7 @@ const legalDocs = {
             ["Cloudflare, Inc.", "Hosting, Bereitstellung und Absicherung der Website", "USA (EU-Rechenzentren)"],
             ["helloly (Hosting-Anbieter)", "E-Mail-Postfächer und E-Mail-Versand", "Österreich"],
             ["Google Ireland Ltd.", "E-Mail-Abruf über Gmail", "Irland / USA"],
-            ["INSCYD GmbH", "Softwaregestützte Auswertung der Diagnostikdaten", "Schweiz"]
+            ["Softwareanbieter für Leistungsdiagnostik", "Softwaregestützte Auswertung der Diagnostikdaten", "Schweiz"]
           ]
         } },
       { p: "<strong>Übermittlung in Drittländer:</strong> Bei Cloudflare, Inc. und Google kann eine Verarbeitung in den USA erfolgen. Grundlage sind die Standardvertragsklauseln der Europäischen Kommission sowie ergänzende Schutzmaßnahmen der Anbieter. Für die Schweiz besteht ein Angemessenheitsbeschluss der Europäischen Kommission, sodass ein mit der EU vergleichbares Datenschutzniveau gewährleistet ist." },
