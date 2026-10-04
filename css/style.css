@@ -1316,6 +1316,11 @@ section {
   text-decoration: none;
 }
 
+/* Im Deutschen ist der Sprachhinweis leer — dann keinen leeren Kasten zeigen. */
+.legal-note:empty {
+  display: none;
+}
+
 .legal-note {
   background: var(--color-accent-light);
   border: 1px solid var(--color-border);

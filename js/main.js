@@ -265,52 +265,6 @@
     }
   }
 
-  // Rechtstexte kommen als Blockliste aus i18n.js, damit neue Abschnitte
-  // ohne Anpassung hier ergaenzt werden koennen.
-  function legalBlocks(blocks) {
-    return blocks.map(function (b) {
-      if (b.h) return "<h2>" + b.h + "</h2>";
-      if (b.p) return "<p>" + b.p + "</p>";
-      if (b.ul) return "<ul>" + b.ul.map(function (i) { return "<li>" + i + "</li>"; }).join("") + "</ul>";
-      if (b.table) {
-        return '<div class="legal-table-wrap"><table class="legal-table"><thead><tr>' +
-          b.table.head.map(function (h) { return "<th>" + h + "</th>"; }).join("") +
-          "</tr></thead><tbody>" +
-          b.table.rows.map(function (r) {
-            return "<tr>" + r.map(function (c) { return "<td>" + c + "</td>"; }).join("") + "</tr>";
-          }).join("") +
-          "</tbody></table></div>";
-      }
-      return "";
-    }).join("");
-  }
-
-  function renderLegalDoc(doc, note) {
-    var html = "<h1>" + doc.title + "</h1>" + '<p class="updated">' + doc.updated + "</p>";
-    if (note) html += '<div class="legal-note">' + note + "</div>";
-    if (doc.intro) html += '<p class="legal-intro">' + doc.intro + "</p>";
-    return html + legalBlocks(doc.blocks);
-  }
-
-  function renderLegal(dict) {
-    var pages = {
-      impressum: "[data-legal-impressum]",
-      datenschutz: "[data-legal-datenschutz]",
-      agb: "[data-legal-agb]"
-    };
-
-    Object.keys(pages).forEach(function (key) {
-      var host = document.querySelector(pages[key]);
-      if (host && dict.legal[key]) {
-        host.innerHTML = renderLegalDoc(dict.legal[key], dict.legal.langNote);
-      }
-    });
-
-    document.querySelectorAll("[data-legal-back]").forEach(function (el) {
-      el.textContent = dict.legal.backToHome;
-    });
-  }
-
   function updateLangToggle(lang) {
     document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
       btn.classList.toggle("active", btn.getAttribute("data-lang-btn") === lang);
@@ -352,7 +306,6 @@
     renderPricing(dict);
     renderFaq(dict);
     renderContactInfo(dict);
-    renderLegal(dict);
     updateLangToggle(lang);
     localStorage.setItem(STORAGE_KEY, lang);
   }
