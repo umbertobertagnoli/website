@@ -76,6 +76,12 @@
       var value = getPath(dict, el.getAttribute("data-i18n"));
       if (value !== undefined) el.textContent = value;
     });
+    // Fuer Texte, die einen Link enthalten — etwa der Datenschutzhinweis
+    // unter dem Formular. Die Strings stammen aus i18n.js, nicht von Nutzern.
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      var value = getPath(dict, el.getAttribute("data-i18n-html"));
+      if (value !== undefined) el.innerHTML = value;
+    });
     document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
       var value = getPath(dict, el.getAttribute("data-i18n-placeholder"));
       if (value !== undefined) el.setAttribute("placeholder", value);

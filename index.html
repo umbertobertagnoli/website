@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WeMakeYouFast — Laktatdiagnostik Wien</title>
   <meta name="description" content="Laktatdiagnostik, Trainingsbereiche und individuelle Trainingspläne für Läufer:innen, Radfahrer:innen, Ruderer:innen und Triathlet:innen in Wien." />
+  <link rel="canonical" href="https://wemakeyoufast.com/" />
+
+  <!-- Link-Vorschau (WhatsApp, Signal, Facebook, LinkedIn …). Crawler lesen die
+       Seite ohne JavaScript, darum stehen diese Texte statisch und auf Deutsch
+       hier und nicht in i18n.js. og:image muss eine absolute URL sein. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="WeMakeYouFast" />
+  <meta property="og:locale" content="de_AT" />
+  <meta property="og:url" content="https://wemakeyoufast.com/" />
+  <meta property="og:title" content="WeMakeYouFast — Laktatdiagnostik Wien" />
+  <meta property="og:description" content="Finde deine exakten Trainingsbereiche per Laktattest und trainiere zielgerichtet statt auf Verdacht — für Läufer:innen, Radfahrer:innen, Ruderer:innen und Triathlet:innen in Wien." />
+  <meta property="og:image" content="https://wemakeyoufast.com/img/hero/laeufer-nazar.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1280" />
+  <meta property="og:image:alt" content="Läufer mit Sportbrille beim Lauftraining auf einem Uferweg am Wasser" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WeMakeYouFast — Laktatdiagnostik Wien" />
+  <meta name="twitter:description" content="Finde deine exakten Trainingsbereiche per Laktattest und trainiere zielgerichtet statt auf Verdacht — Laktatdiagnostik und Trainingsplanung in Wien." />
+  <meta name="twitter:image" content="https://wemakeyoufast.com/img/hero/laeufer-nazar.jpg" />
+  <meta name="twitter:image:alt" content="Läufer mit Sportbrille beim Lauftraining auf einem Uferweg am Wasser" />
+
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%231660e8'/%3E%3Cpath d='M20 65 L38 45 L52 58 L80 30' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -91,6 +114,16 @@
         <p class="about-intro about-intro-secondary" data-reveal data-i18n="about.intro2">
           Die Antworten auf die häufigsten Fragen dazu findest du weiter unten unter „Häufige Fragen“.
         </p>
+
+        <aside class="health-notice" data-reveal>
+          <span class="health-notice-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.6v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16.6" r="1.05" fill="currentColor"/></svg>
+          </span>
+          <div>
+            <h3 data-i18n="about.healthNoticeTitle">Wichtiger Gesundheitshinweis</h3>
+            <p data-i18n="about.healthNotice">Der Laktattest erfolgt unter körperlicher Ausbelastung und ersetzt keine medizinische Untersuchung. Bei Vorerkrankungen, Beschwerden oder Risikofaktoren ist vorab eine ärztliche Abklärung erforderlich.</p>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -182,7 +215,7 @@
         </div>
 
         <div class="contact-grid">
-          <form class="contact-form" data-reveal data-contact-form novalidate action="https://formsubmit.co/ajax/umberto@wemakeyoufast.com" method="POST">
+          <form class="contact-form" data-reveal data-contact-form novalidate action="https://formsubmit.co/ajax/ubertagnoli@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="Neue Anfrage über wemakeyoufast.com" />
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="form-group">
@@ -198,7 +231,8 @@
               <textarea id="message" name="message" required data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Erzähl uns von deinen Zielen …"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.form.submit">Nachricht senden</button>
-            <div class="form-error" data-form-error hidden>Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib uns direkt an <a href="mailto:umberto@wemakeyoufast.com">umberto@wemakeyoufast.com</a>.</div>
+            <p class="form-consent" data-i18n-html="contact.form.consent">Mit dem Absenden stimmst du zu, dass wir deine Angaben zur Bearbeitung deiner Anfrage verwenden. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+            <div class="form-error" data-form-error hidden>Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib uns direkt an <a href="mailto:ubertagnoli@gmail.com">ubertagnoli@gmail.com</a>.</div>
             <div class="form-success" data-form-success>
               <span data-i18n="contact.form.success">Danke! Deine Nachricht wurde übermittelt.</span>
             </div>

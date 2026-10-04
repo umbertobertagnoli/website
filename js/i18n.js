@@ -33,7 +33,9 @@ const translations = {
       eyebrow: "Leistungen",
       title: "Was ist ein Laktattest?",
       intro: "Der Laktattest ist die zuverlässigste Methode, um deine individuellen Trainingsbereiche zu bestimmen. Durch eine stufenweise Belastung auf Laufband, Rad oder Ergometer messen wir, wie sich dein Laktatspiegel im Blut verändert — und leiten daraus präzise Herzfrequenz- und Leistungsbereiche für dein Training ab.",
-      intro2: "Die Antworten auf die häufigsten Fragen dazu — für wen sich der Test eignet, was enthalten ist und wie er abläuft — findest du weiter unten unter „Häufige Fragen“."
+      intro2: "Die Antworten auf die häufigsten Fragen dazu — für wen sich der Test eignet, was enthalten ist und wie er abläuft — findest du weiter unten unter „Häufige Fragen“.",
+      healthNoticeTitle: "Wichtiger Gesundheitshinweis",
+      healthNotice: "Der Laktattest erfolgt unter körperlicher Ausbelastung und ersetzt keine medizinische Untersuchung. Bei Vorerkrankungen, Beschwerden oder Risikofaktoren ist vorab eine ärztliche Abklärung erforderlich."
     },
     how: {
       eyebrow: "Ablauf",
@@ -236,7 +238,8 @@ const translations = {
         message: "Nachricht",
         messagePlaceholder: "Erzähl uns von deinen Zielen und deinem Trainingsstand …",
         submit: "Nachricht senden",
-        success: "Danke! Deine Nachricht wurde übermittelt — wir melden uns in Kürze."
+        success: "Danke! Deine Nachricht wurde übermittelt — wir melden uns in Kürze.",
+        consent: 'Mit dem Absenden stimmst du zu, dass wir deine Angaben zur Bearbeitung deiner Anfrage verwenden. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.'
       },
       info: {
         addressLabel: "Standort",
@@ -244,7 +247,7 @@ const translations = {
         emailLabel: "E-Mail",
         phoneLabel: "Telefon",
         people: [
-          { name: "Umberto", email: "umberto@wemakeyoufast.com", phone: "+43 676 850755600" },
+          { name: "Umberto", email: "ubertagnoli@gmail.com", phone: "+43 676 850755600" },
           { name: "Andreas", email: "andreas@wemakeyoufast.com", phone: "+43 676 850755855" }
         ]
       },
@@ -296,7 +299,9 @@ const translations = {
       eyebrow: "Services",
       title: "What Is a Lactate Test?",
       intro: "A lactate test is the most reliable way to determine your individual training zones. Through a graded test on a treadmill, bike, or ergometer, we track how your blood lactate changes — and translate that into precise heart-rate and power zones for your training.",
-      intro2: "Answers to the most common questions — who the test is for, what's included, and how it works — are further down under “Frequently Asked Questions”."
+      intro2: "Answers to the most common questions — who the test is for, what's included, and how it works — are further down under “Frequently Asked Questions”.",
+      healthNoticeTitle: "Important health notice",
+      healthNotice: "The lactate test is performed at maximal physical exertion and is not a substitute for a medical examination. If you have a pre-existing condition, current symptoms or risk factors, a medical clearance is required beforehand."
     },
     how: {
       eyebrow: "How it works",
@@ -499,7 +504,8 @@ const translations = {
         message: "Message",
         messagePlaceholder: "Tell us about your goals and training background …",
         submit: "Send Message",
-        success: "Thank you! Your message has been sent — we'll be in touch shortly."
+        success: "Thank you! Your message has been sent — we'll be in touch shortly.",
+        consent: 'By submitting you agree that we may use your details to process your enquiry. Details in our <a href="datenschutz.html">privacy policy</a> (German only).'
       },
       info: {
         addressLabel: "Location",
@@ -507,7 +513,7 @@ const translations = {
         emailLabel: "Email",
         phoneLabel: "Phone",
         people: [
-          { name: "Umberto", email: "umberto@wemakeyoufast.com", phone: "+43 676 850755600" },
+          { name: "Umberto", email: "ubertagnoli@gmail.com", phone: "+43 676 850755600" },
           { name: "Andreas", email: "andreas@wemakeyoufast.com", phone: "+43 676 850755855" }
         ]
       },
@@ -540,9 +546,9 @@ const translations = {
      { table: { head: [...], rows: [[...], ...] } }
    ------------------------------------------------------------------------- */
 
-const MAIL_UMBERTO = '<a href="mailto:umberto@wemakeyoufast.com">umberto@wemakeyoufast.com</a>';
+const MAIL_UMBERTO = '<a href="mailto:ubertagnoli@gmail.com">ubertagnoli@gmail.com</a>';
 const MAIL_ANDREAS = '<a href="mailto:andreas@wemakeyoufast.com">andreas@wemakeyoufast.com</a>';
-const MAIL_INFO = '<a href="mailto:info@wemakeyoufast.com">info@wemakeyoufast.com</a>';
+const MAIL_INFO = '<a href="mailto:ubertagnoli@gmail.com">ubertagnoli@gmail.com</a>';
 const TEL_UMBERTO = '<a href="tel:+43676850755600">+43 676 850755600</a>';
 const TEL_ANDREAS = '<a href="tel:+43676850755855">+43 676 850755855</a>';
 
