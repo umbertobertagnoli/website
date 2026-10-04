@@ -812,6 +812,10 @@ section {
 
 /* ---------- FAQ ---------- */
 
+.faq {
+  background: var(--color-bg-alt);
+}
+
 .faq-list {
   max-width: 820px;
   margin: 0 auto;
@@ -923,73 +927,6 @@ section {
 
 .faq-panel-inner p:last-child {
   margin-bottom: 20px;
-}
-
-/* ---------- Testimonials ---------- */
-
-.testimonials {
-  background: var(--color-bg-alt);
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.testimonial-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 30px 28px;
-  display: flex;
-  flex-direction: column;
-}
-
-.testimonial-quote {
-  color: var(--color-text);
-  font-size: 1rem;
-  line-height: 1.65;
-  margin-bottom: 22px;
-}
-
-.testimonial-quote::before {
-  content: "\201C";
-  color: var(--color-accent);
-  font-size: 1.4rem;
-  font-weight: 800;
-  margin-right: 2px;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: auto;
-}
-
-.testimonial-avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-accent), #6fb1ff);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 0.95rem;
-  flex-shrink: 0;
-}
-
-.testimonial-author .name {
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-.testimonial-author .role {
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
 }
 
 /* ---------- Contact ---------- */
@@ -1474,8 +1411,7 @@ section {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .pricing-grid,
-  .testimonial-grid {
+  .pricing-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1558,8 +1494,7 @@ section {
   }
 
   .steps,
-  .pricing-grid,
-  .testimonial-grid {
+  .pricing-grid {
     grid-template-columns: 1fr;
   }
 

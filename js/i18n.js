@@ -15,7 +15,6 @@ const translations = {
       how: "Ablauf",
       ueberUns: "Über uns",
       pricing: "Preise",
-      testimonials: "Stimmen",
       faq: "FAQ",
       contact: "Kontakt",
       cta: "Termin buchen"
@@ -169,15 +168,6 @@ const translations = {
         desc: "Fortlaufende individuelle Trainingsplanung nach deinem Laktattest. Dein Plan wird laufend an deine Entwicklung angepasst. Monatlich kündbar."
       }
     },
-    testimonials: {
-      eyebrow: "Stimmen",
-      title: "Das sagen unsere Athlet:innen",
-      items: [
-        { quote: "Der Laktattest bei WeMakeYouFast hat mein Training komplett verändert. Endlich trainiere ich in den richtigen Zonen statt nach Gefühl.", name: "Lisa K.", role: "Marathonläuferin" },
-        { quote: "Sehr professionelle Betreuung und eine Auswertung, die man wirklich versteht. Klare Empfehlung für alle Radsportler:innen.", name: "Thomas B.", role: "Hobby-Radrennfahrer" },
-        { quote: "Der All-Inclusive-Test plus Trainingsplan war genau das, was ich vor meinem ersten Ironman gebraucht habe.", name: "Julia S.", role: "Triathletin" }
-      ]
-    },
     faq: {
       eyebrow: "FAQ",
       title: "Häufige Fragen",
@@ -281,7 +271,6 @@ const translations = {
       how: "How it works",
       ueberUns: "About us",
       pricing: "Pricing",
-      testimonials: "Testimonials",
       faq: "FAQ",
       contact: "Contact",
       cta: "Book Appointment"
@@ -434,15 +423,6 @@ const translations = {
         price: "€69 / month",
         desc: "Ongoing individual training planning after your lactate test. Your plan is continuously adapted to your development. Cancel monthly."
       }
-    },
-    testimonials: {
-      eyebrow: "Testimonials",
-      title: "What Our Athletes Say",
-      items: [
-        { quote: "The lactate test at WeMakeYouFast completely changed how I train. I'm finally training in the right zones instead of just going by feel.", name: "Lisa K.", role: "Marathon Runner" },
-        { quote: "Very professional guidance and results that actually make sense. Highly recommend it to any cyclist.", name: "Thomas B.", role: "Amateur Road Racer" },
-        { quote: "The All-Inclusive test plus training plan was exactly what I needed before my first Ironman.", name: "Julia S.", role: "Triathlete" }
-      ]
     },
     faq: {
       eyebrow: "FAQ",
