@@ -15,6 +15,7 @@ const translations = {
       how: "Ablauf",
       ueberUns: "Über uns",
       pricing: "Preise",
+      testimonials: "Stimmen",
       faq: "FAQ",
       contact: "Kontakt",
       cta: "Termin buchen"
@@ -168,6 +169,13 @@ const translations = {
         desc: "Fortlaufende individuelle Trainingsplanung nach deinem Laktattest. Dein Plan wird laufend an deine Entwicklung angepasst. Monatlich kündbar."
       }
     },
+    testimonials: {
+      eyebrow: "Stimmen",
+      title: "Das sagen unsere Athlet:innen",
+      items: [
+        { quote: "Als Laufanfängerin weiß ich dank we make you fast nun genau welchen Pace ich für mein Zone 2 und Intervall Training laufen soll. Ich kann mich beim Training dadurch ganz allein aufs Laufen konzentrieren und habe nicht mehr das Gefühl, einfach nur im Dunklen zu tappen. Es macht einfach viel mehr Spaß zu wissen, dass das Training was man macht funktioniert. Danke we make you fast — dank euch werde ich bald super fast ;) 🫶🏼", name: "Felicia W.", role: "Läuferin" }
+      ]
+    },
     faq: {
       eyebrow: "FAQ",
       title: "Häufige Fragen",
@@ -271,6 +279,7 @@ const translations = {
       how: "How it works",
       ueberUns: "About us",
       pricing: "Pricing",
+      testimonials: "Testimonials",
       faq: "FAQ",
       contact: "Contact",
       cta: "Book Appointment"
@@ -423,6 +432,14 @@ const translations = {
         price: "€69 / month",
         desc: "Ongoing individual training planning after your lactate test. Your plan is continuously adapted to your development. Cancel monthly."
       }
+    },
+    testimonials: {
+      eyebrow: "Testimonials",
+      title: "What Our Athletes Say",
+      // Echtes Kundenzitat — bleibt im Original, wird nicht uebersetzt.
+      items: [
+        { quote: "Als Laufanfängerin weiß ich dank we make you fast nun genau welchen Pace ich für mein Zone 2 und Intervall Training laufen soll. Ich kann mich beim Training dadurch ganz allein aufs Laufen konzentrieren und habe nicht mehr das Gefühl, einfach nur im Dunklen zu tappen. Es macht einfach viel mehr Spaß zu wissen, dass das Training was man macht funktioniert. Danke we make you fast — dank euch werde ich bald super fast ;) 🫶🏼", name: "Felicia W.", role: "Runner" }
+      ]
     },
     faq: {
       eyebrow: "FAQ",

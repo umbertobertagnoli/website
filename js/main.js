@@ -246,6 +246,28 @@
     }
   }
 
+  function renderTestimonials(dict) {
+    var wrap = document.querySelector("[data-testimonials]");
+    if (!wrap) return;
+    wrap.innerHTML = dict.testimonials.items
+      .map(function (t) {
+        var initials = t.name
+          .split(" ")
+          .map(function (p) { return p.charAt(0); })
+          .join("");
+        return (
+          '<div class="testimonial-card" data-reveal>' +
+          '<p class="testimonial-quote">' + t.quote + "</p>" +
+          '<div class="testimonial-author">' +
+          '<div class="testimonial-avatar">' + initials + "</div>" +
+          '<div><div class="name">' + t.name + '</div><div class="role">' + t.role + "</div></div>" +
+          "</div></div>"
+        );
+      })
+      .join("");
+    observeReveal(wrap.querySelectorAll("[data-reveal]"));
+  }
+
   function renderContactInfo(dict) {
     var wrap = document.querySelector("[data-contact-info]");
     if (wrap) {
@@ -304,6 +326,7 @@
     renderSteps(dict);
     renderUeberUns(dict);
     renderPricing(dict);
+    renderTestimonials(dict);
     renderFaq(dict);
     renderContactInfo(dict);
     updateLangToggle(lang);
@@ -385,7 +408,7 @@
   }
 
   function initStaticReveal() {
-    observeReveal(document.querySelectorAll("section [data-reveal]:not([data-steps] *):not([data-pricing] *):not([data-faq] *):not([data-ueber-uns-stats] *):not([data-ueber-uns-blocks] *):not([data-ueber-uns-audience] *)"));
+    observeReveal(document.querySelectorAll("section [data-reveal]:not([data-steps] *):not([data-pricing] *):not([data-testimonials] *):not([data-faq] *):not([data-ueber-uns-stats] *):not([data-ueber-uns-blocks] *):not([data-ueber-uns-audience] *)"));
   }
 
   function initFooterYear() {
