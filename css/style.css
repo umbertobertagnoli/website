@@ -931,13 +931,25 @@ section {
   background: var(--color-bg-alt);
 }
 
-/* auto-fit statt drei fester Spalten: eine einzelne Stimme steht damit als
-   eine zentrierte Karte und nicht als Drittel neben zwei Luecken. */
+/* Mehrspaltiges Mauerwerk statt Raster: die Stimmen sind unterschiedlich
+   lang, so bleiben keine Luecken zwischen den Karten. */
 .testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 420px));
-  justify-content: center;
-  gap: 24px;
+  column-count: 1;
+  column-gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+@media (min-width: 760px) {
+  .testimonial-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1100px) {
+  .testimonial-grid {
+    column-count: 3;
+  }
 }
 
 .testimonial-card {
@@ -945,8 +957,47 @@ section {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 30px 28px;
+  margin-bottom: 24px;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
+/* Sterne und Titel uebernehmen wir aus der Bewertung; die Sternfarbe ist
+   bewusst unser Gelbton und nicht das Gruen der Plattform. */
+.testimonial-stars {
   display: flex;
-  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.testimonial-stars svg {
+  width: 16px;
+  height: 16px;
+  fill: #f5a623;
+}
+
+.testimonial-title {
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.testimonials-more {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.testimonials-more a {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.testimonials-more a:hover,
+.testimonials-more a:focus-visible {
+  text-decoration: underline;
 }
 
 .testimonial-quote {
@@ -968,7 +1019,6 @@ section {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: auto;
 }
 
 .testimonial-avatar {

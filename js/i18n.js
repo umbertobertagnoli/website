@@ -1,5 +1,81 @@
 /* WeMakeYouFast — translation data (DE default, EN secondary) */
 
+/* Kundenstimmen. Die Trustpilot-Bewertungen stehen im Wortlaut der Athleten
+   und bleiben deshalb auch im englischen Modus auf Deutsch. */
+const TRUSTPILOT_URL = "https://de.trustpilot.com/review/wemakeyoufast.com";
+
+const REVIEWS = [
+  {
+    title: "Der Laktattest bei WeMakeYouFast hat mein Leben verändert.",
+    quote: "Der Laktattest bei WeMakeYouFast hat mein Training – und ehrlich gesagt meine gesamte Ausrichtung – nachhaltig verändert: eine klare Struktur, einen präzisen Fokus, schnell überprüfbare Fortschritte und ein beständiges Gefühl des Wachsens. Statt auf Verdacht zu trainieren, habe ich nun einen verlässlichen Kompass für Leistungssteigerung, Regeneration und mentale Ausrichtung. Dazu kommt eine Betreuung, die ihresgleichen sucht: wertschätzend, hochprofessionell, individuell und zutiefst vertrauensvoll. Die langjährige Erfahrung im Leistungssport und der medizinische Background schaffen genau das Vertrauen, das man seinem eigenen Körper und seiner Entwicklung entgegenbringen möchte. Man bekommt hier nicht einfach einen Test, sondern Orientierung – für den Körper ebenso wie für den Geist. Für mich ein echter Gamechanger.",
+    name: "Maximilian Traxl",
+    rating: 5,
+    source: "Trustpilot",
+    date: "1. August 2026"
+  },
+  {
+    title: "Bester und professionellster Laktattest",
+    quote: "Bester und professionellster Laktattest, den ich jemals gemacht habe. Das Training hat bei mir phänomenal funktioniert, es ist perfekt auf meine Trainings Erfahrung und Ziele zugeschnitten. Auch wurden sich sehr spezifische Intervalle für meine Sportart ausgedacht.",
+    name: "Moritz Zenhäusern",
+    rating: 5,
+    source: "Trustpilot",
+    date: "13. Oktober 2026"
+  },
+  {
+    title: "Genau das Coaching, das ich gebraucht habe",
+    quote: "Nach meinem gescheiterten Versuch, den Marathon unter 4 Stunden zu laufen, war ich mental und sportlich erstmal in einem ziemlichen Tief. Umbi hat mich da wieder rausgeholt, mein Training neu strukturiert und mich Schritt für Schritt wieder auf Vordermann gebracht. Man merkt, dass hier nicht einfach irgendein Standardplan abgearbeitet wird, sondern wirklich auf den Athleten und seine Ziele eingegangen wird. Klare Empfehlung für alle, die im Ausdauersport den nächsten Schritt machen und wirklich schneller werden wollen!",
+    name: "Thomas Handschuh",
+    rating: 5,
+    source: "Trustpilot",
+    date: "7. Oktober 2026"
+  },
+  {
+    title: "Schon viele Jahre Erfahrung im Sport",
+    quote: "Schon viele Jahre Erfahrung im Sport gesammelt und dennoch kann man immer noch etwas verbessern! Durch den Laktattest und die sehr kompetente Trainingsplanung von We Make You Fast ist mir erst jetzt klar geworden, welche Intervalle wirklich Sinn machen!",
+    name: "Christoph Kicker",
+    rating: 5,
+    source: "Trustpilot",
+    date: "15. August 2026"
+  },
+  {
+    title: "Super professionelle und individuelle Betreuung",
+    quote: "Super professionelle und individuelle Betreuung! Die Beiden sind auch richtig motivierend, kümmern sich die ganze Zeit um einen und wenn man Fragen hat, kann man sich jederzeit melden. Würd ich jedem empfehlen, der seine Fitness auf ein neues Level bringen will!",
+    name: "E. S.",
+    rating: 5,
+    source: "Trustpilot",
+    date: "7. Oktober 2026"
+  },
+  {
+    title: "Super Betreuung!",
+    quote: "Super Betreuung! Sowohl Andi als auch Umbi sind fachlich sehr kompetent und konnten mir schon viel weiterhelfen. Klare Empfehlung!",
+    name: "Jonas Maniamkerikalam",
+    rating: 5,
+    source: "Trustpilot",
+    date: "8. Oktober 2026"
+  },
+  {
+    title: "Starke Fortschritte beim Training",
+    quote: "Dank we make you fast sehe ich starke Fortschritte beim Training! Sehr gut weiterempfehlbar",
+    name: "Marie",
+    rating: 5,
+    source: "Trustpilot",
+    date: "13. Oktober 2026"
+  },
+  {
+    title: "Seit dem Laktattest sehr gesteigert",
+    quote: "Ich habe mich seit dem Laktattest bei Wemakeyoufast, sehr gesteigert und bin total happy mit den Erfolgen und Leistungssteigerung. Kann nur weiterempfehlen.",
+    name: "Monkey Fun",
+    rating: 5,
+    source: "Trustpilot",
+    date: "6. Oktober 2026"
+  },
+  {
+    quote: "Als Laufanfängerin weiß ich dank we make you fast nun genau welchen Pace ich für mein Zone 2 und Intervall Training laufen soll. Ich kann mich beim Training dadurch ganz allein aufs Laufen konzentrieren und habe nicht mehr das Gefühl, einfach nur im Dunklen zu tappen. Es macht einfach viel mehr Spaß zu wissen, dass das Training was man macht funktioniert. Danke we make you fast — dank euch werde ich bald super fast ;) 🫶🏼",
+    name: "Felicia W.",
+    role: "Läuferin"
+  }
+];
+
 const translations = {
   de: {
     meta: {
@@ -115,7 +191,7 @@ const translations = {
       plans: [
         {
           name: "Laktattest Basic",
-          price: "99 €",
+          price: "89 €",
           period: "einmalig",
           desc: "Der ehrliche Einstieg: Du gehst mit klaren Zahlen nach Hause statt mit einer Faustformel aus dem Internet.",
           features: [
@@ -130,7 +206,7 @@ const translations = {
         },
         {
           name: "Laktattest Pro",
-          price: "149 €",
+          price: "134 €",
           period: "einmalig",
           desc: "Das volle Bild deiner Physiologie. Du siehst nicht nur, wo deine Zonen liegen, sondern warum sie dort liegen und was sich am schnellsten verbessern lässt.",
           features: [
@@ -147,7 +223,7 @@ const translations = {
         },
         {
           name: "All-Inclusive",
-          price: "449 €",
+          price: "404 €",
           period: "3 Monate Bindung",
           desc: "Testen allein verändert nichts. Hier begleiten wir dich drei Monate durch: messen, planen, nachmessen, nachjustieren.",
           features: [
@@ -165,16 +241,15 @@ const translations = {
       trustNote: "Keine versteckten Kosten. Keine Abo-Falle.",
       addon: {
         title: "Laufende Trainingsplanung",
-        price: "69 € / Monat",
+        price: "62 € / Monat",
         desc: "Fortlaufende individuelle Trainingsplanung nach deinem Laktattest. Dein Plan wird laufend an deine Entwicklung angepasst. Monatlich kündbar."
       }
     },
     testimonials: {
       eyebrow: "Stimmen",
       title: "Das sagen unsere Athlet:innen",
-      items: [
-        { quote: "Als Laufanfängerin weiß ich dank we make you fast nun genau welchen Pace ich für mein Zone 2 und Intervall Training laufen soll. Ich kann mich beim Training dadurch ganz allein aufs Laufen konzentrieren und habe nicht mehr das Gefühl, einfach nur im Dunklen zu tappen. Es macht einfach viel mehr Spaß zu wissen, dass das Training was man macht funktioniert. Danke we make you fast — dank euch werde ich bald super fast ;) 🫶🏼", name: "Felicia W.", role: "Läuferin" }
-      ]
+      moreLabel: "Alle Bewertungen auf Trustpilot",
+      items: REVIEWS
     },
     faq: {
       eyebrow: "FAQ",
@@ -208,11 +283,11 @@ const translations = {
         },
         {
           q: "Was kostet ein Laktattest?",
-          a: "Der Laktattest Basic kostet 99 €, der Laktattest Pro 149 € — beide einmalig. Das All-Inclusive-Paket kostet 449 € bei drei Monaten Mindestlaufzeit. Welche Leistungen jeweils enthalten sind, siehst du im Abschnitt „Preise“."
+          a: "Der Laktattest Basic kostet 89 €, der Laktattest Pro 134 € — beide einmalig. Das All-Inclusive-Paket kostet 404 € bei drei Monaten Mindestlaufzeit. Welche Leistungen jeweils enthalten sind, siehst du im Abschnitt „Preise“."
         },
         {
           q: "Gibt es auch eine laufende Trainingsbetreuung?",
-          a: "Ja. Nach deinem Laktattest kannst du die laufende Trainingsplanung um 69 € pro Monat dazubuchen: individuelle Trainingsplanung, laufend an deine Entwicklung angepasst, monatlich kündbar."
+          a: "Ja. Nach deinem Laktattest kannst du die laufende Trainingsplanung um 62 € pro Monat dazubuchen: individuelle Trainingsplanung, laufend an deine Entwicklung angepasst, monatlich kündbar."
         },
         {
           q: "Wo findet der Test statt?",
@@ -379,7 +454,7 @@ const translations = {
       plans: [
         {
           name: "Lactate Test Basic",
-          price: "€99",
+          price: "€89",
           period: "one-time",
           desc: "The honest starting point: you go home with clear numbers instead of a rule of thumb from the internet.",
           features: [
@@ -394,7 +469,7 @@ const translations = {
         },
         {
           name: "Lactate Test Pro",
-          price: "€149",
+          price: "€134",
           period: "one-time",
           desc: "The full picture of your physiology. You see not just where your zones are, but why they're there and what will improve fastest.",
           features: [
@@ -411,7 +486,7 @@ const translations = {
         },
         {
           name: "All-Inclusive",
-          price: "€449",
+          price: "€404",
           period: "3-month commitment",
           desc: "Testing alone changes nothing. Here we're with you for three months: measure, plan, re-measure, adjust.",
           features: [
@@ -429,17 +504,16 @@ const translations = {
       trustNote: "No hidden costs. No subscription traps.",
       addon: {
         title: "Ongoing Training Plan",
-        price: "€69 / month",
+        price: "€62 / month",
         desc: "Ongoing individual training planning after your lactate test. Your plan is continuously adapted to your development. Cancel monthly."
       }
     },
     testimonials: {
       eyebrow: "Testimonials",
       title: "What Our Athletes Say",
+      moreLabel: "All reviews on Trustpilot",
       // Echtes Kundenzitat — bleibt im Original, wird nicht uebersetzt.
-      items: [
-        { quote: "Als Laufanfängerin weiß ich dank we make you fast nun genau welchen Pace ich für mein Zone 2 und Intervall Training laufen soll. Ich kann mich beim Training dadurch ganz allein aufs Laufen konzentrieren und habe nicht mehr das Gefühl, einfach nur im Dunklen zu tappen. Es macht einfach viel mehr Spaß zu wissen, dass das Training was man macht funktioniert. Danke we make you fast — dank euch werde ich bald super fast ;) 🫶🏼", name: "Felicia W.", role: "Runner" }
-      ]
+      items: REVIEWS
     },
     faq: {
       eyebrow: "FAQ",
@@ -473,11 +547,11 @@ const translations = {
         },
         {
           q: "What does a lactate test cost?",
-          a: "Lactate Test Basic is €99 and Lactate Test Pro is €149 — both one-time. The All-Inclusive package is €449 with a three-month minimum term. You can see what each one includes in the “Pricing” section."
+          a: "Lactate Test Basic is €89 and Lactate Test Pro is €134 — both one-time. The All-Inclusive package is €404 with a three-month minimum term. You can see what each one includes in the “Pricing” section."
         },
         {
           q: "Do you also offer ongoing training support?",
-          a: "Yes. After your lactate test you can add ongoing training planning for €69 per month: individual training planning, continuously adapted to your development, cancellable monthly."
+          a: "Yes. After your lactate test you can add ongoing training planning for €62 per month: individual training planning, continuously adapted to your development, cancellable monthly."
         },
         {
           q: "Where does the test take place?",

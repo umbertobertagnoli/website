@@ -246,6 +246,11 @@
     }
   }
 
+  function stars(n) {
+    var star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.6.8-4.1 4.1 1 5.8L10 14.9 4.9 17.6l1-5.8L1.8 7.7l5.6-.8z"/></svg>';
+    return '<div class="testimonial-stars" aria-label="' + n + ' von 5 Sternen">' + new Array(n + 1).join(star) + "</div>";
+  }
+
   function renderTestimonials(dict) {
     var wrap = document.querySelector("[data-testimonials]");
     if (!wrap) return;
@@ -255,16 +260,29 @@
           .split(" ")
           .map(function (p) { return p.charAt(0); })
           .join("");
+        // Zweite Zeile unter dem Namen: Quelle und Datum bei den Trustpilot-
+        // Bewertungen, sonst die Rolle der Person.
+        var meta = t.source ? t.source + " · " + t.date : (t.role || "");
         return (
           '<div class="testimonial-card" data-reveal>' +
+          (t.rating ? stars(t.rating) : "") +
+          (t.title ? '<p class="testimonial-title">' + t.title + "</p>" : "") +
           '<p class="testimonial-quote">' + t.quote + "</p>" +
           '<div class="testimonial-author">' +
           '<div class="testimonial-avatar">' + initials + "</div>" +
-          '<div><div class="name">' + t.name + '</div><div class="role">' + t.role + "</div></div>" +
+          '<div><div class="name">' + t.name + '</div><div class="role">' + meta + "</div></div>" +
           "</div></div>"
         );
       })
       .join("");
+
+    var more = document.querySelector("[data-testimonials-more]");
+    if (more) {
+      more.innerHTML =
+        '<a href="' + TRUSTPILOT_URL + '" target="_blank" rel="noopener">' +
+        dict.testimonials.moreLabel + "</a>";
+    }
+
     observeReveal(wrap.querySelectorAll("[data-reveal]"));
   }
 
