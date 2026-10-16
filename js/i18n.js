@@ -206,7 +206,7 @@ const translations = {
         },
         {
           name: "Laktattest Pro",
-          price: "134 €",
+          price: "129 €",
           period: "einmalig",
           desc: "Das volle Bild deiner Physiologie. Du siehst nicht nur, wo deine Zonen liegen, sondern warum sie dort liegen und was sich am schnellsten verbessern lässt.",
           features: [
@@ -223,7 +223,7 @@ const translations = {
         },
         {
           name: "All-Inclusive",
-          price: "404 €",
+          price: "399 €",
           period: "3 Monate Bindung",
           desc: "Testen allein verändert nichts. Hier begleiten wir dich drei Monate durch: messen, planen, nachmessen, nachjustieren.",
           features: [
@@ -241,7 +241,7 @@ const translations = {
       trustNote: "Keine versteckten Kosten. Keine Abo-Falle.",
       addon: {
         title: "Laufende Trainingsplanung",
-        price: "62 € / Monat",
+        price: "59 € / Monat",
         desc: "Fortlaufende individuelle Trainingsplanung nach deinem Laktattest. Dein Plan wird laufend an deine Entwicklung angepasst. Monatlich kündbar."
       }
     },
@@ -283,11 +283,11 @@ const translations = {
         },
         {
           q: "Was kostet ein Laktattest?",
-          a: "Der Laktattest Basic kostet 89 €, der Laktattest Pro 134 € — beide einmalig. Das All-Inclusive-Paket kostet 404 € bei drei Monaten Mindestlaufzeit. Welche Leistungen jeweils enthalten sind, siehst du im Abschnitt „Preise“."
+          a: "Der Laktattest Basic kostet 89 €, der Laktattest Pro 129 € — beide einmalig. Das All-Inclusive-Paket kostet 399 € bei drei Monaten Mindestlaufzeit. Welche Leistungen jeweils enthalten sind, siehst du im Abschnitt „Preise“."
         },
         {
           q: "Gibt es auch eine laufende Trainingsbetreuung?",
-          a: "Ja. Nach deinem Laktattest kannst du die laufende Trainingsplanung um 62 € pro Monat dazubuchen: individuelle Trainingsplanung, laufend an deine Entwicklung angepasst, monatlich kündbar."
+          a: "Ja. Nach deinem Laktattest kannst du die laufende Trainingsplanung um 59 € pro Monat dazubuchen: individuelle Trainingsplanung, laufend an deine Entwicklung angepasst, monatlich kündbar."
         },
         {
           q: "Wo findet der Test statt?",
@@ -469,7 +469,7 @@ const translations = {
         },
         {
           name: "Lactate Test Pro",
-          price: "€134",
+          price: "€129",
           period: "one-time",
           desc: "The full picture of your physiology. You see not just where your zones are, but why they're there and what will improve fastest.",
           features: [
@@ -486,7 +486,7 @@ const translations = {
         },
         {
           name: "All-Inclusive",
-          price: "€404",
+          price: "€399",
           period: "3-month commitment",
           desc: "Testing alone changes nothing. Here we're with you for three months: measure, plan, re-measure, adjust.",
           features: [
@@ -504,7 +504,7 @@ const translations = {
       trustNote: "No hidden costs. No subscription traps.",
       addon: {
         title: "Ongoing Training Plan",
-        price: "€62 / month",
+        price: "€59 / month",
         desc: "Ongoing individual training planning after your lactate test. Your plan is continuously adapted to your development. Cancel monthly."
       }
     },
@@ -547,11 +547,11 @@ const translations = {
         },
         {
           q: "What does a lactate test cost?",
-          a: "Lactate Test Basic is €89 and Lactate Test Pro is €134 — both one-time. The All-Inclusive package is €404 with a three-month minimum term. You can see what each one includes in the “Pricing” section."
+          a: "Lactate Test Basic is €89 and Lactate Test Pro is €129 — both one-time. The All-Inclusive package is €399 with a three-month minimum term. You can see what each one includes in the “Pricing” section."
         },
         {
           q: "Do you also offer ongoing training support?",
-          a: "Yes. After your lactate test you can add ongoing training planning for €62 per month: individual training planning, continuously adapted to your development, cancellable monthly."
+          a: "Yes. After your lactate test you can add ongoing training planning for €59 per month: individual training planning, continuously adapted to your development, cancellable monthly."
         },
         {
           q: "Where does the test take place?",
